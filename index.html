@@ -13,12 +13,12 @@
 .wrap{width:min(1050px,92%);margin:auto}header{position:sticky;top:0;z-index:5;background:#071a15ed;border-bottom:1px solid var(--line)}
 nav{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 0;flex-wrap:wrap}.brand{font-size:23px;color:var(--gold);font-weight:800;text-decoration:none}.navlinks{display:flex;gap:15px;flex-wrap:wrap}.navlinks a{color:var(--muted);text-decoration:none;font-size:13px}
 button,a{cursor:pointer}.lang,.btn,.small{border-radius:999px;padding:9px 16px;border:1px solid var(--gold);font:inherit}.lang,.small{background:transparent;color:var(--gold)}.btn{background:var(--gold);color:#14251c;text-decoration:none;font-weight:700;display:inline-block}.hero{text-align:center;padding:58px 0 38px}.hero .arabic{font:48px Georgia;color:var(--gold)}h1{font-size:clamp(30px,6vw,48px);margin:5px 0}.founder{color:var(--gold)}.muted{color:var(--muted)}section{padding:24px 0;scroll-margin-top:85px}.head{text-align:center;margin-bottom:17px}.head small{color:var(--gold);letter-spacing:1px}.head h2{margin:3px 0;font-size:27px}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.card{background:linear-gradient(145deg,#12382b,#0b241c);border:1px solid var(--line);border-radius:17px;padding:19px;min-width:0}.card h3{color:var(--gold);margin:0 0 8px}.verse{font:24px/1.9 Georgia;text-align:center;direction:rtl;color:#f5e6bb}.row{display:flex;gap:9px;align-items:center;flex-wrap:wrap}input,select{max-width:100%;padding:11px;background:#061811;color:white;border:1px solid var(--line);border-radius:9px;font:inherit}input{width:100%;margin:5px 0 10px}.row input,.row select{flex:1}.counter{font-size:56px;color:var(--gold);text-align:center;font-weight:800;margin:8px}.counter-btn{width:100%;min-height:92px;border:2px solid var(--gold);border-radius:18px;background:#174333;color:var(--cream);font-size:25px;font-weight:700}.feedback{color:var(--gold);min-height:25px}.prayers{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}.prayer{background:#09251d;border:1px solid var(--line);border-radius:12px;text-align:center;padding:10px}.prayer b{display:block;color:var(--gold)}.option{display:block;width:100%;text-align:start;margin:8px 0;padding:11px;background:#09251d;color:var(--cream);border:1px solid var(--line);border-radius:10px}.option:disabled{opacity:.7}.footer{border-top:1px solid var(--line);padding:25px 0;text-align:center;color:var(--muted);font-size:13px}
-.menu-wrap{position:relative}.dots{width:42px;height:42px;border:1px solid var(--gold);border-radius:50%;background:transparent;color:var(--gold);font-size:25px;line-height:1}.menu-pop{position:absolute;top:50px;inset-inline-end:0;min-width:220px;padding:8px;background:#0b241c;border:1px solid var(--line);border-radius:13px;box-shadow:0 12px 30px #0008;display:none;z-index:20}.menu-pop.open{display:block}.menu-pop a{display:block;padding:10px 12px;color:var(--cream);text-decoration:none;border-radius:8px}.menu-pop a:hover,.menu-pop a:focus{background:#174333}.nav-actions{display:flex;align-items:center;gap:9px}.about-card{text-align:center}.dhikr-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.dhikr-card{background:#09251d;border:1px solid var(--line);border-radius:14px;padding:15px}.dhikr-text{font:22px/1.9 Georgia;text-align:center;color:#f5e6bb;margin:5px 0 10px}.dhikr-translation{color:var(--muted);font-size:14px}.dhikr-ref{color:var(--gold);font-size:12px;margin-top:8px}.dhikr-controls{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:12px}.dhikr-count{font-size:23px;color:var(--gold);font-weight:800;min-width:35px;text-align:center}.dhikr-controls button{background:var(--gold);color:#14251c;border:0;border-radius:9px;padding:8px 13px;font:inherit;font-weight:700}.dhikr-controls button.reset-one{background:transparent;color:var(--gold);border:1px solid var(--gold)}
+.dhikr-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.dhikr-card{background:#09251d;border:1px solid var(--line);border-radius:14px;padding:15px}.dhikr-text{font:22px/1.9 Georgia;text-align:center;color:#f5e6bb;margin:5px 0 10px}.dhikr-translation{color:var(--muted);font-size:14px}.dhikr-ref{color:var(--gold);font-size:12px;margin-top:8px}.dhikr-controls{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:12px}.dhikr-count{font-size:23px;color:var(--gold);font-weight:800;min-width:35px;text-align:center}.dhikr-controls button{background:var(--gold);color:#14251c;border:0;border-radius:9px;padding:8px 13px;font:inherit;font-weight:700}.dhikr-controls button.reset-one{background:transparent;color:var(--gold);border:1px solid var(--gold)}
 @media(max-width:700px){.grid,.dhikr-list{grid-template-columns:1fr}.prayers{grid-template-columns:repeat(2,1fr)}.navlinks{width:100%;justify-content:center}.hero{padding-top:35px}}
 </style>
 </head>
 <body>
-<header><div class="wrap"><nav><a class="brand" href="#home">دار الإحسان</a><div class="navlinks"><a href="#quran" data-ar="القرآن" data-en="Quran">القرآن</a><a href="#adhkar" data-ar="الأذكار" data-en="Adhkar">الأذكار</a><a href="#tasbih" data-ar="التسبيح" data-en="Tasbih">التسبيح</a><a href="#quiz" data-ar="المسابقة" data-en="Quiz">المسابقة</a><a href="#prayer" data-ar="الصلاة" data-en="Prayer">الصلاة</a><a href="#community" data-ar="المجتمع" data-en="Community">المجتمع</a></div><div class="nav-actions"><button class="lang" id="langBtn" type="button">English</button><div class="menu-wrap"><button class="dots" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false">⋮</button><div class="menu-pop" id="menuPop"><a href="#about" data-ar="عن دار الإحسان" data-en="About Dar Al Ihsan">عن دار الإحسان</a><a href="https://discord.gg/HYpjBD6cV" target="_blank" rel="noopener" data-ar="انضم إلى المجتمع" data-en="Join our community">انضم إلى المجتمع</a><a href="https://discord.gg/4jWBKYPqku" target="_blank" rel="noopener" data-ar="دعم بوت خادم دار الإحسان" data-en="Khadim Dar Ihsan Bot Support">دعم بوت خادم دار الإحسان</a></div></div></div></nav></div></header>
+<header><div class="wrap"><nav><a class="brand" href="#home">دار الإحسان</a><div class="navlinks"><a href="#quran">القرآن</a><a href="#adhkar">الأذكار</a><a href="#tasbih">التسبيح</a><a href="#quiz">المسابقة</a><a href="#prayer">الصلاة</a><a href="#community">المجتمع</a><a href="#support">المساعدة والدعم</a></div><button class="lang" id="langBtn" type="button">English</button></nav></div></header>
 <main class="wrap">
 <section class="hero" id="home"><div class="arabic">دار الإحسان</div><h1 data-ar="مرحبًا بكم في دار الإحسان" data-en="Welcome to Dar Al Ihsan">مرحبًا بكم في دار الإحسان</h1><p class="founder">تأسيس: Sahil Muhammad</p><p class="muted" data-ar="مساحة للعلم النافع والذكر والتدبر والعمل الصالح." data-en="A place for beneficial knowledge, remembrance, reflection and good deeds.">مساحة للعلم النافع والذكر والتدبر والعمل الصالح.</p><a class="btn" href="#quran" data-ar="ابدأ الاستكشاف" data-en="Explore">ابدأ الاستكشاف</a></section>
 <section id="quran"><div class="head"><small>القرآن الكريم</small><h2 data-ar="اقرأ القرآن" data-en="Read the Quran">اقرأ القرآن</h2></div><div class="card"><p class="muted" data-ar="اختر أي سورة من السور الـ ١١٤." data-en="Choose any of the 114 surahs.">اختر أي سورة من السور الـ ١١٤.</p><div class="row"><select id="surahSelect" aria-label="Choose surah"><option value="">جارٍ تحميل قائمة السور…</option></select><button class="btn" id="loadSurah" type="button">عرض السورة</button></div><p class="feedback" id="quranStatus" aria-live="polite"></p><div id="quranText" class="verse" aria-live="polite">اختر سورة لعرضها هنا.</div></div></section>
@@ -32,58 +32,23 @@ button,a{cursor:pointer}.lang,.btn,.small{border-radius:999px;padding:9px 16px;b
 <section id="tasbih"><div class="head"><small>الذكر</small><h2 data-ar="السبحة الإلكترونية" data-en="Digital Tasbih">السبحة الإلكترونية</h2></div><div class="card center"><p class="muted" data-ar="اضغط على الزر لزيادة العدد." data-en="Tap the button to increase the count.">اضغط على الزر لزيادة العدد.</p><div class="counter" id="tasbihCount" aria-live="polite">0</div><button class="counter-btn" id="tasbihTap" type="button">سُبْحَانَ اللَّهِ</button><p><button class="small" id="tasbihReset" type="button">إعادة التصفير</button></p><p class="muted" id="tasbihMessage"></p></div></section>
 <section id="quiz"><div class="head"><small>اختبر معلوماتك</small><h2 data-ar="المسابقة الإسلامية" data-en="Islamic Quiz">المسابقة الإسلامية</h2></div><div class="card"><p id="quizQuestion"></p><div id="quizOptions"></div><p class="feedback" id="quizFeedback" aria-live="polite"></p><button class="btn" id="nextQuestion" type="button">السؤال التالي</button></div></section>
 <section id="prayer"><div class="head"><small>العبادة اليومية</small><h2 data-ar="مواقيت الصلاة" data-en="Prayer Times">مواقيت الصلاة</h2></div><div class="card"><p class="muted" data-ar="أدخل المدينة والدولة لجلب المواقيت." data-en="Enter a city and country to retrieve prayer times.">أدخل المدينة والدولة لجلب المواقيت.</p><div class="row"><input id="city" value="Mombasa" aria-label="City" placeholder="City"><input id="country" value="Kenya" aria-label="Country" placeholder="Country"><button class="btn" id="getTimes" type="button">عرض المواقيت</button></div><p class="feedback" id="prayerStatus" aria-live="polite"></p><div class="prayers" id="prayerTimes"><div class="prayer"><b>الفجر</b>—</div><div class="prayer"><b>الظهر</b>—</div><div class="prayer"><b>العصر</b>—</div><div class="prayer"><b>المغرب</b>—</div><div class="prayer"><b>العشاء</b>—</div></div><p class="muted">المصدر: AlAdhan API. قد تختلف طرق الحساب؛ يرجى التأكد من المسجد المحلي.</p></div></section>
-<section id="about"><div class="head"><small data-ar="تعرف علينا" data-en="Who we are">تعرف علينا</small><h2 data-ar="عن دار الإحسان" data-en="About Dar Al Ihsan">عن دار الإحسان</h2></div><div class="card about-card"><p data-ar="دار الإحسان مساحة إسلامية للتعلم والذكر والتدبر والعمل الصالح، نسأل الله أن يجعلها نافعة للمسلمين." data-en="Dar Al Ihsan is an Islamic space for learning, remembrance, reflection and good deeds. We ask Allah to make it beneficial for the Muslim community.">دار الإحسان مساحة إسلامية للتعلم والذكر والتدبر والعمل الصالح، نسأل الله أن يجعلها نافعة للمسلمين.</p><p class="founder">تأسيس: Sahil Muhammad</p></div></section>
 <section id="community"><div class="head"><small>مجتمعنا</small><h2 data-ar="انضم إلى مجتمعنا" data-en="Join our community">انضم إلى مجتمعنا</h2></div><div class="card center"><p class="muted">دار الإحسان · Learn · Reflect · Grow</p><a class="btn" href="https://discord.gg/HYpjBD6cV" target="_blank" rel="noopener">انضم إلى Discord</a></div></section>
+<section id="support"><div class="head"><small>المساعدة والدعم</small><h2 data-ar="المساعدة والدعم" data-en="Help & Support">المساعدة والدعم</h2><p class="muted" data-ar="للحصول على المساعدة أو الدعم، انضم إلى خادم Khadim Dar Al Ihsan." data-en="For help or support, join the Khadim Dar Al Ihsan server.">للحصول على المساعدة أو الدعم، انضم إلى خادم Khadim Dar Al Ihsan.</p></div><div class="card center"><p class="muted">Khadim Dar Al Ihsan · Help & Support</p><a class="btn" href="https://discord.gg/PPRX7ZbQM" target="_blank" rel="noopener noreferrer">المساعدة والدعم · Join Discord</a></div></section>
 </main><footer class="footer"><div class="wrap">دار الإحسان · May Allah grant us beneficial knowledge and righteous deeds.</div></footer>
 <script>
 'use strict';
 const $ = id => document.getElementById(id);
 let language = 'ar';
-function setLanguage(nextLanguage) {
-  language = nextLanguage;
+$('langBtn').addEventListener('click', () => {
+  language = language === 'ar' ? 'en' : 'ar';
   document.documentElement.lang = language;
   document.documentElement.dir = language === 'ar' ? 'rtl' : 'ltr';
   document.querySelectorAll('[data-ar][data-en]').forEach(el => el.textContent = el.dataset[language]);
   $('langBtn').textContent = language === 'ar' ? 'English' : 'العربية';
-  $('menuBtn').setAttribute('aria-label', language === 'ar' ? 'فتح القائمة' : 'Open menu');
-  $('menuBtn').title = language === 'ar' ? 'القائمة' : 'Menu';
-  $('morningBtn').textContent = language === 'ar' ? 'أذكار الصباح' : 'Morning Adhkar';
-  $('eveningBtn').textContent = language === 'ar' ? 'أذكار المساء' : 'Evening Adhkar';
-  $('loadSurah').textContent = language === 'ar' ? 'عرض السورة' : 'Load Surah';
-  $('getTimes').textContent = language === 'ar' ? 'عرض المواقيت' : 'Get Prayer Times';
-  $('tasbihReset').textContent = language === 'ar' ? 'إعادة التصفير' : 'Reset';
-  $('nextQuestion').textContent = language === 'ar' ? 'السؤال التالي' : 'Next Question';
-  renderAdhkar();
-  if (quizIndex >= 0) renderQuizQuestion();
-}
-$('langBtn').addEventListener('click', () => setLanguage(language === 'ar' ? 'en' : 'ar'));
-$('menuBtn').addEventListener('click', () => {
-  const open = $('menuPop').classList.toggle('open');
-  $('menuBtn').setAttribute('aria-expanded', String(open));
-});
-document.addEventListener('click', event => {
-  if (!event.target.closest('.menu-wrap')) {
-    $('menuPop').classList.remove('open');
-    $('menuBtn').setAttribute('aria-expanded', 'false');
-  }
-});
-document.addEventListener('keydown', event => {
-  if (event.key === 'Escape') {
-    $('menuPop').classList.remove('open');
-    $('menuBtn').setAttribute('aria-expanded', 'false');
-  }
-});
-$('menuPop').addEventListener('click', event => {
-  if (event.target.closest('a')) {
-    $('menuPop').classList.remove('open');
-    $('menuBtn').setAttribute('aria-expanded', 'false');
-  }
 });
 let tasbih = 0;
-try { tasbih = Math.max(0, Number(localStorage.getItem('dih-tasbih') || 0) || 0); } catch (_) {}
-$('tasbihCount').textContent = String(tasbih);
-$('tasbihTap').addEventListener('click', () => { tasbih += 1; $('tasbihCount').textContent = String(tasbih); try { localStorage.setItem('dih-tasbih', String(tasbih)); } catch (_) {} $('tasbihMessage').textContent = tasbih % 33 === 0 ? 'أحسنت، أكملت ٣٣ تسبيحة.' : ''; });
-$('tasbihReset').addEventListener('click', () => { tasbih = 0; $('tasbihCount').textContent = '0'; try { localStorage.setItem('dih-tasbih', '0'); } catch (_) {} $('tasbihMessage').textContent = 'تم تصفير العداد.'; });
+$('tasbihTap').addEventListener('click', () => { tasbih += 1; $('tasbihCount').textContent = String(tasbih); $('tasbihMessage').textContent = tasbih % 33 === 0 ? 'أحسنت، أكملت ٣٣ تسبيحة.' : ''; });
+$('tasbihReset').addEventListener('click', () => { tasbih = 0; $('tasbihCount').textContent = '0'; $('tasbihMessage').textContent = 'تم تصفير العداد.'; });
 
 async function loadSurahList() {
   const select = $('surahSelect');
@@ -127,4 +92,23 @@ const adhkar = {
  evening: [
   {text:'أَمْسَيْنَا وَأَمْسَى الْمُلْكُ لِلَّهِ، وَالْحَمْدُ لِلَّهِ، لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ.',translation:'We have entered the evening and all sovereignty belongs to Allah. Praise belongs to Allah; there is no god but Allah alone, with no partner. His is the dominion and His is the praise, and He is capable of all things.',count:1,ref:'Sahih Muslim 2723'},
   {text:'اللَّهُمَّ بِكَ أَمْسَيْنَا، وَبِكَ أَصْبَحْنَا، وَبِكَ نَحْيَا، وَبِكَ نَمُوتُ، وَإِلَيْكَ الْمَصِيرُ.',translation:'O Allah, by You we reach the evening and by You we reach the morning; by You we live and die, and to You is the return.',count:1,ref:'Jami at-Tirmidhi 3391'},
-  {text:'اللَّهُمَّ أَنْتَ رَبِّي لَا إِلَهَ إِلَّا أَنْتَ، خَلَقْتَنِي وَأَنَا عَبْدُكَ، وَأَنَا عَلَى عَهْدِكَ وَوَعْدِكَ مَا اسْتَطَعْتُ، أَعُوذُ بِكَ مِنْ شَرِّ مَا صَنَعْتُ، أَبُوءُ لَكَ بِنِعْمَتِكَ عَلَيَّ، وَأَبُ
+  {text:'اللَّهُمَّ أَنْتَ رَبِّي لَا إِلَهَ إِلَّا أَنْتَ، خَلَقْتَنِي وَأَنَا عَبْدُكَ، وَأَنَا عَلَى عَهْدِكَ وَوَعْدِكَ مَا اسْتَطَعْتُ، أَعُوذُ بِكَ مِنْ شَرِّ مَا صَنَعْتُ، أَبُوءُ لَكَ بِنِعْمَتِكَ عَلَيَّ، وَأَبُوءُ بِذَنْبِي فَاغْفِرْ لِي، فَإِنَّهُ لَا يَغْفِرُ الذُّنُوبَ إِلَّا أَنْتَ.',translation:'O Allah, You are my Lord; none has the right to be worshipped but You. You created me and I am Your servant. I keep my covenant and promise to You as best I can. I seek refuge in You from the evil I have done. I acknowledge Your blessings and my sins, so forgive me; none forgives sins but You.',count:1,ref:'Sahih al-Bukhari 6306 (Sayyid al-Istighfar)'},
+  {text:'قُلْ هُوَ اللَّهُ أَحَدٌ ۞ اللَّهُ الصَّمَدُ ۞ لَمْ يَلِدْ وَلَمْ يُولَدْ ۞ وَلَمْ يَكُنْ لَهُ كُفُوًا أَحَدٌ.',translation:'Surah Al-Ikhlas: Allah is One; Allah, the Eternal Refuge. He neither begets nor is born, and none is comparable to Him.',count:3,ref:'Qur’an 112; morning and evening recitation: Sunan Abi Dawud 5082'},
+  {text:'قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ ۞ مِنْ شَرِّ مَا خَلَقَ ۞ وَمِنْ شَرِّ غَاسِقٍ إِذَا وَقَبَ ۞ وَمِنْ شَرِّ النَّفَّاثَاتِ فِي الْعُقَدِ ۞ وَمِنْ شَرِّ حَاسِدٍ إِذَا حَسَدَ.',translation:'Surah Al-Falaq: I seek refuge in the Lord of daybreak from the evil of what He created, the darkness, those who blow on knots, and the envier.',count:3,ref:'Qur’an 113; morning and evening recitation: Sunan Abi Dawud 5082'},
+  {text:'قُلْ أَعُوذُ بِرَبِّ النَّاسِ ۞ مَلِكِ النَّاسِ ۞ إِلَهِ النَّاسِ ۞ مِنْ شَرِّ الْوَسْوَاسِ الْخَنَّاسِ ۞ الَّذِي يُوَسْوِسُ فِي صُدُورِ النَّاسِ ۞ مِنَ الْجِنَّةِ وَالنَّاسِ.',translation:'Surah An-Nas: I seek refuge in the Lord, King and God of mankind from the whisperer who withdraws, who whispers into people’s hearts, from jinn and people.',count:3,ref:'Qur’an 114; morning and evening recitation: Sunan Abi Dawud 5082'},
+  {text:'بِسْمِ اللَّهِ الَّذِي لَا يَضُرُّ مَعَ اسْمِهِ شَيْءٌ فِي الْأَرْضِ وَلَا فِي السَّمَاءِ وَهُوَ السَّمِيعُ الْعَلِيمُ.',translation:'In the name of Allah, with whose name nothing on earth or in heaven can cause harm; He is the All-Hearing, All-Knowing.',count:3,ref:'Sunan Abi Dawud 5088; Jami at-Tirmidhi 3388'}
+ ]
+};
+let adhkarMode = 'morning';
+let adhkarCounts = {morning:[], evening:[]};
+function renderAdhkar() {
+ const list = $('adhkarList'); list.replaceChildren();
+ adhkar[adhkarMode].forEach((item,index) => {
+  const card = document.createElement('article'); card.className = 'dhikr-card';
+  const text = document.createElement('p'); text.className = 'dhikr-text'; text.textContent = item.text;
+  const translation = document.createElement('p'); translation.className = 'dhikr-translation'; translation.textContent = item.translation;
+  const ref = document.createElement('p'); ref.className = 'dhikr-ref'; ref.textContent = 'المصدر: ' + item.ref;
+  const controls = document.createElement('div'); controls.className = 'dhikr-controls';
+  const count = document.createElement('span'); count.className = 'dhikr-count'; count.textContent = `${adhkarCounts[adhkarMode][index] || 0}/${item.count}`;
+  const add = document.createElement('button'); add.type='button'; add.textContent = 'تم'; add.setAttribute('aria-label','Mark one repetition complete');
+  add.addEventListener('click', () => { const current=adhkarCounts[adhkarMode][index]||0; if(current < item.count) adhkarCounts[adhkarMode][index]=current+1; count.textContent=`${adhkarCounts[adhkarMode][index]}/${item.count}`; add.disabled=adhkarCounts[adhkarMode][index]>=item
