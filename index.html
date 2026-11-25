@@ -1,163 +1,184 @@
-<!doctype html>
-<html lang="ar" dir="rtl">
-<head>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl"><head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#071a15">
-<meta name="google-site-verification" content="pRo85MGdEFXi3504D2O82xW6oZ8dnQq0iWmCYXsFwZE">
-<meta name="description" content="دار الإحسان — مساحة إسلامية للتعلم والذكر والتدبر">
-<title>دار الإحسان | Dar Al Ihsan</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>دار إحسان | Dar Ihsan</title>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&amp;family=Cormorant+Garamond:wght@500;700&amp;display=swap" rel="stylesheet">
 <style>
-:root{--bg:#071a15;--panel:#103126;--gold:#d8b66a;--cream:#f5f0df;--muted:#b8c7bc;--line:#49664f}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 80% 0%,#174333,transparent 38%),var(--bg);color:var(--cream);font:16px/1.75 system-ui,sans-serif}
-.wrap{width:min(1050px,92%);margin:auto}header{position:sticky;top:0;z-index:5;background:#071a15ed;border-bottom:1px solid var(--line)}
-nav{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 0;flex-wrap:wrap}.brand{font-size:23px;color:var(--gold);font-weight:800;text-decoration:none}.navlinks{display:flex;gap:15px;flex-wrap:wrap}.navlinks a{color:var(--muted);text-decoration:none;font-size:13px}
-button,a{cursor:pointer}.lang,.btn,.small{border-radius:999px;padding:9px 16px;border:1px solid var(--gold);font:inherit}.lang,.small{background:transparent;color:var(--gold)}.btn{background:var(--gold);color:#14251c;text-decoration:none;font-weight:700;display:inline-block}.hero{text-align:center;padding:58px 0 38px}.hero .arabic{font:48px Georgia;color:var(--gold)}h1{font-size:clamp(30px,6vw,48px);margin:5px 0}.founder{color:var(--gold)}.muted{color:var(--muted)}section{padding:24px 0;scroll-margin-top:85px}.head{text-align:center;margin-bottom:17px}.head small{color:var(--gold);letter-spacing:1px}.head h2{margin:3px 0;font-size:27px}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.card{background:linear-gradient(145deg,#12382b,#0b241c);border:1px solid var(--line);border-radius:17px;padding:19px;min-width:0}.card h3{color:var(--gold);margin:0 0 8px}.verse{font:24px/1.9 Georgia;text-align:center;direction:rtl;color:#f5e6bb}.row{display:flex;gap:9px;align-items:center;flex-wrap:wrap}input,select{max-width:100%;padding:11px;background:#061811;color:white;border:1px solid var(--line);border-radius:9px;font:inherit}input{width:100%;margin:5px 0 10px}.row input,.row select{flex:1}.counter{font-size:56px;color:var(--gold);text-align:center;font-weight:800;margin:8px}.counter-btn{width:100%;min-height:92px;border:2px solid var(--gold);border-radius:18px;background:#174333;color:var(--cream);font-size:25px;font-weight:700}.feedback{color:var(--gold);min-height:25px}.prayers{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}.prayer{background:#09251d;border:1px solid var(--line);border-radius:12px;text-align:center;padding:10px}.prayer b{display:block;color:var(--gold)}.option{display:block;width:100%;text-align:start;margin:8px 0;padding:11px;background:#09251d;color:var(--cream);border:1px solid var(--line);border-radius:10px}.option:disabled{opacity:.7}.footer{border-top:1px solid var(--line);padding:25px 0;text-align:center;color:var(--muted);font-size:13px}
-.dhikr-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.dhikr-card{background:#09251d;border:1px solid var(--line);border-radius:14px;padding:15px}.dhikr-text{font:22px/1.9 Georgia;text-align:center;color:#f5e6bb;margin:5px 0 10px}.dhikr-translation{color:var(--muted);font-size:14px}.dhikr-ref{color:var(--gold);font-size:12px;margin-top:8px}.dhikr-controls{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:12px}.dhikr-count{font-size:23px;color:var(--gold);font-weight:800;min-width:35px;text-align:center}.dhikr-controls button{background:var(--gold);color:#14251c;border:0;border-radius:9px;padding:8px 13px;font:inherit;font-weight:700}.dhikr-controls button.reset-one{background:transparent;color:var(--gold);border:1px solid var(--gold)}
-@media(max-width:700px){.grid,.dhikr-list{grid-template-columns:1fr}.prayers{grid-template-columns:repeat(2,1fr)}.navlinks{width:100%;justify-content:center}.hero{padding-top:35px}}
-
-.menu-wrap{position:relative;display:inline-flex;align-items:center}
-.menu-toggle{width:46px;height:42px;display:inline-flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;background:#103126;border:1px solid var(--gold);border-radius:10px;padding:8px;cursor:pointer}
-.menu-toggle span{display:block;width:21px;height:2px;background:var(--gold);border-radius:3px}
-.menu-toggle:focus-visible,.menu-panel a:focus-visible{outline:2px solid var(--cream);outline-offset:3px}
-.menu-panel{position:absolute;top:calc(100% + 9px);inset-inline-end:0;z-index:20;display:none;width:min(270px,85vw);padding:9px;background:#103126;border:1px solid var(--gold);border-radius:13px;box-shadow:0 12px 32px #0008}
-.menu-panel.open{display:block}
-.menu-panel a{display:block;padding:10px 12px;color:var(--cream);text-decoration:none;border-radius:8px}
-.menu-panel a:hover{background:#174333;color:var(--gold)}
-.menu-panel .menu-external{border-top:1px solid var(--line);margin-top:5px;padding-top:13px}
-.info-card{background:linear-gradient(145deg,#12382b,#0b241c);border:1px solid var(--line);border-radius:17px;padding:19px}
-.info-card h3{color:var(--gold);margin-top:0}
-@media(max-width:700px){.menu-wrap{order:3}.menu-panel{inset-inline-end:0}}
-
+:root{--bg:#070705;--card:#12110c;--line:#3a3322;--gold:#d9b878;--gold2:#b8935a;--txt:#f1e8d4;--mut:#a59d88;color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--txt);font-family:'Amiri',Georgia,serif;line-height:1.9;font-size:18px}
+body[data-lang=en]{font-family:'Cormorant Garamond',Georgia,serif;font-size:20px}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1000px;margin:auto;padding:0 20px}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:rgba(7,7,5,.92);backdrop-filter:blur(8px);border-bottom:1px solid #1d1a12}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:12px 20px;max-width:1000px;margin:auto}
+.logo{font-size:26px;font-weight:700;color:var(--gold);letter-spacing:.5px}
+.logo small{display:block;font-size:11px;color:var(--mut);letter-spacing:3px;line-height:1;font-weight:400}
+nav{display:flex;gap:18px;align-items:center}
+nav a{color:var(--mut);font-size:16px}nav a:hover{color:var(--gold)}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:10px 22px;border-radius:99px;border:1px solid var(--gold2);color:var(--gold);background:transparent;font:inherit;cursor:pointer}
+.btn.fill{background:linear-gradient(135deg,#f0dfb4,#b8935a);color:#1a1408;border:0;font-weight:700}
+.menu{display:none;width:42px;height:42px;border-radius:50%;border:1px solid var(--line);background:var(--card);color:var(--gold);cursor:pointer}
+.hero{text-align:center;padding:80px 0 60px;background:radial-gradient(ellipse at top,#1a1608 0,transparent 65%)}
+.hero h1{font-size:clamp(34px,7vw,64px);margin:0 0 16px;line-height:1.4;background:linear-gradient(180deg,#f6ecd0,#b8935a);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{color:var(--mut);max-width:600px;margin:0 auto 30px}
+.cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+h2{text-align:center;font-size:clamp(28px,5vw,40px);color:var(--gold);margin:70px 0 30px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+.card{background:linear-gradient(145deg,var(--card),#1b1810);border:1px solid var(--line);border-radius:26px;padding:26px;transition:.25s}
+.card:hover{border-color:var(--gold2);transform:translateY(-3px)}
+.ico{width:62px;height:62px;border-radius:18px;border:1px solid var(--line);display:grid;place-items:center;margin-bottom:14px;background:#0d0c08}
+.ico svg{width:30px;height:30px;stroke:var(--gold);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.card h3{margin:0 0 6px;font-size:23px;color:var(--txt)}.card p{margin:0;color:var(--mut);font-size:16px}
+.verse{text-align:center;font-size:clamp(24px,4vw,34px);color:var(--gold);padding:50px 0 0}
+.premium{margin-top:70px;border:1px solid var(--gold2);border-radius:34px;padding:44px 28px;text-align:center;background:radial-gradient(ellipse at top,#241d0c,var(--card) 70%);position:relative;overflow:hidden}
+.badge{display:inline-block;padding:4px 18px;border-radius:99px;background:linear-gradient(135deg,#f0dfb4,#b8935a);color:#1a1408;font-size:15px;font-weight:700;margin-bottom:16px}
+.premium h2{margin:0 0 16px}.premium p{max-width:700px;margin:0 auto 14px;color:#cfc6b0}
+.free{font-size:22px;color:var(--gold)}
+.perks{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:22px 0 0;padding:0;list-style:none}
+.perks li{border:1px solid var(--line);border-radius:99px;padding:4px 18px;font-size:15px;color:var(--mut)}
+.join{margin-top:70px;text-align:center;border:1px solid var(--line);border-radius:34px;padding:44px 24px;background:var(--card)}
+.join h2{margin:0 0 10px}.join p{color:var(--mut);margin:0 0 22px}
+footer{margin-top:70px;border-top:1px solid #1d1a12;padding:40px 0 30px}
+.fcols{display:flex;flex-wrap:wrap;gap:40px;justify-content:space-between}
+.fcols h4{margin:0 0 10px;color:var(--gold)}.fcols a{display:block;color:var(--mut);font-size:16px}.fcols a:hover{color:var(--gold)}
+.copy{text-align:center;color:var(--mut);font-size:14px;margin-top:30px}
+@media(max-width:760px){nav{display:none;position:absolute;top:100%;inset-inline:0;background:#0a0a07;flex-direction:column;padding:20px;border-bottom:1px solid var(--line)}nav.open{display:flex}.menu{display:block}.hero{padding-top:50px}}
+[hidden]{display:none!important}
+#admin{position:fixed;inset-inline:12px;bottom:12px;z-index:20;max-width:560px;margin:auto;background:#0d0c08;border:1px solid var(--gold2);border-radius:24px;padding:20px;max-height:85vh;overflow:auto;box-shadow:0 10px 40px #000}
+#admin h3{margin:0 0 10px;color:var(--gold);font-size:22px}
+#admin label{display:block;font-size:14px;color:var(--mut);margin:10px 0 4px}
+#admin select,#admin textarea,#admin input{width:100%;background:#16140d;color:var(--txt);border:1px solid var(--line);border-radius:12px;padding:10px;font:inherit;font-size:15px}
+#admin textarea{min-height:90px}
+#admin .row{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap}
+.pcard{border:1px solid var(--line);border-radius:34px;padding:28px 20px;background:radial-gradient(ellipse at top,#1a1608,var(--card) 60%);text-align:center}
+.sel{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+.sel select{flex:1;min-width:140px;background:#16140d;color:var(--gold);border:1px solid var(--gold2);border-radius:99px;padding:10px 16px;font:inherit;font-size:17px}
+.pdate{margin:18px 0;color:var(--mut);border-bottom:1px solid var(--line);padding-bottom:14px}
+.next small{color:var(--mut)}.next b{display:block;font-size:42px;color:var(--gold);line-height:1.3}
+.cd{font-size:44px;letter-spacing:2px;font-family:Georgia,serif;direction:ltr}
+.pgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:24px 0}
+@media(min-width:700px){.pgrid{grid-template-columns:repeat(3,1fr)}}
+.pt{position:relative;border:1px solid var(--line);border-radius:22px;padding:20px 8px 14px;background:#0d0c08}
+.pt svg{width:34px;height:34px;stroke:var(--gold2);fill:none;stroke-width:1.5;stroke-linecap:round}
+.pt div{font-size:20px}.pt b{display:block;font-size:24px;color:var(--txt)}
+.pt.nx{background:linear-gradient(135deg,#f0dfb4,#b8935a);border:0}.pt.nx *{color:#1a1408;stroke:#1a1408}
+.pt.cu{border-color:var(--gold)}
+.tag{position:absolute;top:-12px;inset-inline:0;margin:auto;width:max-content;padding:0 14px;border-radius:99px;background:var(--gold);color:#1a1408;font-size:14px}
+.qib{display:flex;align-items:center;justify-content:center;gap:24px;flex-wrap:wrap;border:1px solid var(--line);border-radius:24px;padding:18px}
+.qib svg{width:120px;height:120px}
+.note{color:var(--mut);font-size:14px;margin:16px 0 0}
 </style>
-</head>
-<body>
-<header><div class="wrap"><nav><a class="brand" href="#home">دار الإحسان</a><div class="navlinks"><a href="#quran">القرآن</a><a href="#adhkar">الأذكار</a><a href="#tasbih">التسبيح</a><a href="#quiz">المسابقة</a><a href="#prayer">الصلاة</a><a href="#community">المجتمع</a></div>
-<div class="menu-wrap">
-<button class="menu-toggle" id="menuToggle" type="button" aria-label="فتح القائمة" aria-expanded="false" aria-controls="siteMenu">
-<span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
-</button>
-<div class="menu-panel" id="siteMenu" hidden>
-<a href="#about">عن دار الإحسان</a>
-<a href="#public-access">الوصول العام</a>
-<a href="#premium">Premium</a>
-<a href="#admin">منطقة الإدارة</a>
-<a href="#owner">منطقة المالك</a>
-<a href="#community">انضم إلى المجتمع</a>
-<a class="menu-external" href="https://discord.gg/PPRX7ZbQM" target="_blank" rel="noopener noreferrer">المساعدة والدعم ↗</a>
+<style>artifact-sync,artifact-local{display:contents}</style></head>
+<body data-lang="ar">
+<svg width="0" height="0" style="position:absolute"><defs>
+<symbol id="i-quran" viewBox="0 0 24 24"><path d="M12 6c-2-1.5-5-2-9-1.5v13c4-.5 7 0 9 1.5 2-1.5 5-2 9-1.5v-13C17 4 14 4.500 12 6zM12 6v13"></path></symbol>
+<symbol id="i-dhikr" viewBox="0 0 24 24"><circle cx="12" cy="5" r="1.600"></circle><circle cx="17.500" cy="8" r="1.600"></circle><circle cx="17.500" cy="14" r="1.600"></circle><circle cx="6.500" cy="8" r="1.600"></circle><circle cx="6.500" cy="14" r="1.600"></circle><path d="M12 17v5M10 22h4"></path></symbol>
+<symbol id="i-mic" viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3"></rect><path d="M5 11a7 7 0 0014 0M12 18v3M9 21h6"></path></symbol>
+<symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14.500A8 8 0 019.500 4 8 8 0 1020 14.500z"></path></symbol>
+<symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></symbol>
+<symbol id="i-term" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="3"></rect><path d="M7 10l3 2-3 2M12 15h5"></path></symbol>
+<symbol id="i-discord" viewBox="0 0 24 24"><path d="M7 7c3-1.500 7-1.500 10 0 2 3 3 6 3 9-1.500 1.500-3 2-4 2l-1-2c-2 .5-4 .5-6 0l-1 2c-1 0-2.500-.5-4-2 0-3 1-6 3-9z"></path><circle cx="9.500" cy="12.500" r="1"></circle><circle cx="14.500" cy="12.500" r="1"></circle></symbol>
+<symbol id='i-sun' viewBox='0 0 24 24'><circle cx='12' cy='12' r='4'/><path d='M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2'/></symbol>
+</defs></svg>
+
+<header><div class="bar">
+  <a class="logo" href="#top"><span data-ar="دار إحسان" data-en="Dar Ihsan">Dar Ihsan</span><small>DAR IHSAN</small></a>
+  <nav id="nav">
+    <a href="#features" data-ar="المميزات" data-en="Features">Features</a>
+    <a href="#prayer" data-ar="مواقيت الصلاة" data-en="Prayer times"></a>
+    <a href="#premium" data-ar="بريميوم" data-en="Premium">Premium</a>
+    <a href="#join" data-ar="المجتمع" data-en="Community">Community</a>
+  </nav>
+  <div style="display:flex;gap:8px;align-items:center">
+    <button class="btn" id="adminBtn" hidden="">لوحة الإدارة · Admin</button>
+    <button class="btn" id="lang" aria-label="Language">العربية</button>
+    <button class="menu" id="menu" aria-label="Menu"><svg width="20" height="20" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></button>
+  </div>
+</div></header>
+
+<main id="top">
+<section class="hero"><div class="wrap">
+  <h1 data-ar="أَلَا بِذِكْرِ اللَّهِ تَطْمَئِنُّ الْقُلُوبُ" data-en="Verily, in the remembrance of Allah do hearts find rest.">Verily, in the remembrance of Allah do hearts find rest.</h1>
+  <p data-ar="دار إحسان رفيقك اليومي للقرآن والأذكار ومواقيت الصلاة، بتصميم هادئ يليق بخشوع القلب." data-en="Dar Ihsan is your daily companion for the Quran, remembrances and prayer times, in a calm design that suits a humble heart.">Dar Ihsan is your daily companion for the Quran, remembrances and prayer times, in a calm design that suits a humble heart.</p>
+  <div class="cta">
+    <a class="btn fill" href="#join"><svg width="20" height="20" viewBox="0 0 24 24" style="stroke:#1a1408;fill:none;stroke-width:1.500"><use href="#i-discord"></use></svg><span data-ar="انضم إلى المجتمع" data-en="Join the community">Join the community</span></a>
+    <a class="btn" href="#features" data-ar="اكتشف المميزات" data-en="Explore features">Explore features</a>
+  </div>
+</div></section>
+
+<div class="wrap" id="features">
+  <h2 data-ar="كل ما تحتاجه في مكان واحد" data-en="Everything you need in one place">Everything you need in one place</h2>
+  <div class="grid">
+    <div class="card"><div class="ico"><svg><use href="#i-quran"></use></svg></div><h3 data-ar="القرآن الكريم" data-en="The Holy Quran">The Holy Quran</h3><p data-ar="المصحف كاملًا مع التفسير والتلاوة." data-en="The complete Mushaf with tafsir and recitation.">The complete Mushaf with tafsir and recitation.</p></div>
+    <div class="card"><div class="ico"><svg><use href="#i-dhikr"></use></svg></div><h3 data-ar="الأذكار والتحصين" data-en="Remembrances &amp; Supplications">Remembrances &amp; Supplications</h3><p data-ar="أذكار الصباح والمساء والنوم والاستيقاظ وبعد الصلاة، مع عدّاد يتجدد كل يوم." data-en="Morning, evening, sleep, waking and post-prayer adhkar, with a counter that renews every day.">Morning, evening, sleep, waking and post-prayer adhkar, with a counter that renews every day.</p></div>
+    <div class="card"><div class="ico"><svg><use href="#i-mic"></use></svg></div><h3 data-ar="ترتيل" data-en="Tarteel">Tarteel</h3><p data-ar="اقرأ من حفظك ودَع التطبيق يسمعك ويصحّح لك كلمةً كلمة." data-en="Recite from memory and let it listen and correct you word by word.">Recite from memory and let it listen and correct you word by word.</p></div>
+    <div class="card"><div class="ico"><svg><use href="#i-moon"></use></svg></div><h3 data-ar="أسماء الله الحسنى" data-en="The 99 Names of Allah">The 99 Names of Allah</h3><p data-ar="الأسماء التسعة والتسعون مع معانيها." data-en="All 99 names with their meanings.">All 99 names with their meanings.</p></div>
+    <div class="card"><div class="ico"><svg><use href="#i-clock"></use></svg></div><h3 data-ar="مواقيت الصلاة" data-en="Prayer Times">Prayer Times</h3><p data-ar="أوقات دقيقة حسب مدينتك مع العدّ التنازلي للصلاة القادمة واتجاه القبلة." data-en="Accurate times for your city with a countdown to the next prayer and the Qibla direction.">Accurate times for your city with a countdown to the next prayer and the Qibla direction.</p></div>
+    <div class="card"><div class="ico"><svg><use href="#i-term"></use></svg></div><h3 data-ar="لوحة التحكم والأوامر" data-en="Control Panel &amp; Commands">Control Panel &amp; Commands</h3><p data-ar="اضبط كل شيء من المتصفح دون حفظ أوامر أو نسخ معرّفات." data-en="Set everything up from the browser, no commands to memorize or IDs to copy.">Set everything up from the browser, no commands to memorize or IDs to copy.</p></div>
+  </div>
+
+  <section id='prayer'>
+<h2 data-ar='مواقيت الصلاة' data-en='Prayer Times'></h2>
+<div class='pcard'>
+<div class='sel'><select id='pCo' aria-label='Country'></select><select id='pCi' aria-label='City'></select></div>
+<div class='pdate'><div id='pG'></div><div id='pH'></div></div>
+<div class='next'><small data-ar='الصلاة القادمة' data-en='Next prayer'></small><b id='pN'></b><div class='cd' id='pC'></div><small id='pAt'></small></div>
+<div class='pgrid' id='pGrid'></div>
+<div class='qib'><svg viewBox='0 0 100 100'><circle cx='50' cy='50' r='46' fill='none' stroke='#b8935a' stroke-width='1.5'/><text x='50' y='17' text-anchor='middle' font-size='9' fill='#a59d88'>N</text><g id='qN'><path d='M50 20 L57 52 L43 52Z' fill='#d9b878'/><circle cx='50' cy='52' r='3.5' fill='#d9b878'/></g></svg><div><div data-ar='اتجاه القبلة' data-en='Qibla direction'></div><b id='pQ' style='font-size:28px;color:var(--gold)'></b><div><button class='btn' id='pCompass' data-ar='تفعيل البوصلة' data-en='Activate the compass'></button></div></div></div>
+<p class='note' data-ar='الأوقات تقديرية محسوبة فلكيًا؛ يُرجى مطابقتها مع إعلان مسجدك المحلي.' data-en='Times are astronomical estimates; please check them against your local mosque.'></p>
+</div></section>
+
+  <section class="premium" id="premium">
+    <span class="badge" data-ar="قريبًا" data-en="Coming Soon">Coming Soon</span>
+    <h2 data-ar="ترقيات كبرى قادمة: بريميوم ينطلق قريبًا (مع 4 أشهر مجانًا!)" data-en="Big Upgrades Ahead: Premium Launches Soon (With 4 Months Free!)">Big Upgrades Ahead: Premium Launches Soon (With 4 Months Free!)</h2>
+    <p data-ar="نستعدّ لإطلاق باقة بريميوم الجديدة كليًّا، مليئة بالمزايا الحصرية والخصائص الإضافية والأولوية في الوصول، صُمّمت خصيصًا لمجتمعنا." data-en="We’re getting ready to roll out our brand-new Premium tier, packed with exclusive perks, extra features, and priority access built specifically for our community.">We’re getting ready to roll out our brand-new Premium tier, packed with exclusive perks, extra features, and priority access built specifically for our community.</p>
+    <p data-ar="وللاحتفال بالإطلاق ومكافأة كل من دعمنا منذ البداية، سنمنحكم 4 أشهر من بريميوم مجانًا فور انطلاقه. ترقّبوا الإعلان الرسمي في هذا المكان، ولا تفوّتوا فرصة الحصول على أشهركم المجانية." data-en="To celebrate the launch and reward everyone supporting us from the start, we’re giving away 4 months of Premium for free as soon as it goes live. Keep an eye on this space for the official drop—you won’t want to miss out on claiming your free months.">To celebrate the launch and reward everyone supporting us from the start, we’re giving away 4 months of Premium for free as soon as it goes live. Keep an eye on this space for the official drop—you won’t want to miss out on claiming your free months.</p>
+    <p data-ar="نعمل بإتقان وإحسان على أن تكون هذه الخطوة بداية رحلة أجمل معكم، وسنعلن كل جديد عن مراحل التطوير والإطلاق قريبًا بإذن الله." data-en="We are building this with care and excellence, so that this step becomes the beginning of a more beautiful journey together. We will share every update soon, God willing.">We are building this with care and excellence, so that this step becomes the beginning of a more beautiful journey together. We will share every update soon, God willing.</p>
+    <p class="free" data-ar="4 أشهر مجانًا لكل من ينضم مبكرًا" data-en="4 months free for everyone who joins early">4 months free for everyone who joins early</p>
+    <ul class="perks">
+      <li data-ar="مزايا حصرية" data-en="Exclusive perks">Exclusive perks</li><li data-ar="خصائص إضافية" data-en="Extra features">Extra features</li><li data-ar="أولوية في الوصول" data-en="Priority access">Priority access</li>
+    </ul>
+  </section>
+
+  <section class="join" id="join">
+    <h2 data-ar="انضم إلى مجتمع دار إحسان" data-en="Join the Dar Ihsan community">Join the Dar Ihsan community</h2>
+    <p data-ar="تابع آخر التحديثات، وشاركنا أفكارك، وكن أول من يعلم بإطلاق بريميوم." data-en="Follow the latest updates, share your ideas, and be the first to know when Premium launches.">Follow the latest updates, share your ideas, and be the first to know when Premium launches.</p>
+    <a class="btn fill" id="discord" href="https://discord.gg/ruVW5H5Xe" target="_blank" rel="noopener"><svg width="20" height="20" viewBox="0 0 24 24" style="stroke:#1a1408;fill:none;stroke-width:1.500"><use href="#i-discord"></use></svg><span data-ar="انضم إلى سيرفر ديسكورد" data-en="Join our Discord server">Join our Discord server</span></a>
+  </section>
 </div>
-</div>
-<button class="lang" id="langBtn" type="button">English</button></nav></div></header>
-<main class="wrap">
-<section class="hero" id="home"><div class="arabic">دار الإحسان</div><h1 data-ar="مرحبًا بكم في دار الإحسان" data-en="Welcome to Dar Al Ihsan">مرحبًا بكم في دار الإحسان</h1><p class="founder">تأسيس: Sahil Muhammad</p><p class="muted" data-ar="مساحة للعلم النافع والذكر والتدبر والعمل الصالح." data-en="A place for beneficial knowledge, remembrance, reflection and good deeds.">مساحة للعلم النافع والذكر والتدبر والعمل الصالح.</p><a class="btn" href="#quran" data-ar="ابدأ الاستكشاف" data-en="Explore">ابدأ الاستكشاف</a></section>
-<section id="quran"><div class="head"><small>القرآن الكريم</small><h2 data-ar="اقرأ القرآن" data-en="Read the Quran">اقرأ القرآن</h2></div><div class="card"><p class="muted" data-ar="اختر أي سورة من السور الـ ١١٤." data-en="Choose any of the 114 surahs.">اختر أي سورة من السور الـ ١١٤.</p><div class="row"><select id="surahSelect" aria-label="Choose surah"><option value="">جارٍ تحميل قائمة السور…</option></select><button class="btn" id="loadSurah" type="button">عرض السورة</button></div><p class="feedback" id="quranStatus" aria-live="polite"></p><div id="quranText" class="verse" aria-live="polite">اختر سورة لعرضها هنا.</div></div></section>
+</main>
 
-<section id="adhkar"><div class="head"><small>أذكار اليوم والليلة</small><h2 data-ar="أذكار الصباح والمساء" data-en="Morning & Evening Adhkar">أذكار الصباح والمساء</h2><p class="muted" data-ar="اختر القسم، واقرأ الذكر، ثم اضغط تم عند إكماله." data-en="Choose a collection, read each dhikr, then tap Done when completed.">اختر القسم، واقرأ الذكر، ثم اضغط تم عند إكماله.</p></div>
-<div class="row" style="justify-content:center;margin-bottom:14px"><button class="btn" id="morningBtn" type="button">أذكار الصباح</button><button class="small" id="eveningBtn" type="button">أذكار المساء</button></div>
-<div class="dhikr-list" id="adhkarList" aria-live="polite"></div>
-<p class="muted" style="text-align:center;font-size:12px">تنبيه: هذه مجموعة مختارة من الأذكار المشهورة وليست حصرًا لجميع أذكار الصباح والمساء. راجع مصدر الذكر عند الحاجة.</p>
-</section>
+<footer><div class="wrap">
+  <div class="verse" style="padding:0 0 30px" data-ar="وَذَكِّرْ فَإِنَّ الذِّكْرَىٰ تَنفَعُ الْمُؤْمِنِينَ" data-en="And remind, for indeed, the reminder benefits the believers.">And remind, for indeed, the reminder benefits the believers.</div>
+  <div class="fcols">
+    <div><h4 data-ar="المنصة" data-en="Platform">Platform</h4><a href="#features" data-ar="القرآن الكريم" data-en="Quran">Quran</a><a href="#features" data-ar="الأذكار" data-en="Remembrances">Remembrances</a><a href="#features" data-ar="ترتيل" data-en="Tarteel">Tarteel</a><a href="#features" data-ar="مواقيت الصلاة" data-en="Prayer times">Prayer times</a><a href="#features" data-ar="أسماء الله الحسنى" data-en="Names of Allah">Names of Allah</a></div>
+    <div><h4 data-ar="قانوني" data-en="Legal">Legal</h4><a href="#" data-ar="سياسة الخصوصية" data-en="Privacy policy">Privacy policy</a><a href="#" data-ar="شروط الاستخدام" data-en="Terms of use">Terms of use</a><a href="#join" data-ar="تواصل معنا" data-en="Contact us">Contact us</a></div>
+  </div>
+  <div class="copy" data-ar="دار إحسان. جميع الحقوق محفوظة © 2026" data-en="Dar Ihsan. All rights reserved © 2026">Dar Ihsan. All rights reserved © 2026</div>
+</div></footer>
 
-<section id="tasbih"><div class="head"><small>الذكر</small><h2 data-ar="السبحة الإلكترونية" data-en="Digital Tasbih">السبحة الإلكترونية</h2></div><div class="card center"><p class="muted" data-ar="اضغط على الزر لزيادة العدد." data-en="Tap the button to increase the count.">اضغط على الزر لزيادة العدد.</p><div class="counter" id="tasbihCount" aria-live="polite">0</div><button class="counter-btn" id="tasbihTap" type="button">سُبْحَانَ اللَّهِ</button><p><button class="small" id="tasbihReset" type="button">إعادة التصفير</button></p><p class="muted" id="tasbihMessage"></p></div></section>
-<section id="quiz"><div class="head"><small>اختبر معلوماتك</small><h2 data-ar="المسابقة الإسلامية" data-en="Islamic Quiz">المسابقة الإسلامية</h2></div><div class="card"><p id="quizQuestion"></p><div id="quizOptions"></div><p class="feedback" id="quizFeedback" aria-live="polite"></p><button class="btn" id="nextQuestion" type="button">السؤال التالي</button></div></section>
-<section id="prayer"><div class="head"><small>العبادة اليومية</small><h2 data-ar="مواقيت الصلاة" data-en="Prayer Times">مواقيت الصلاة</h2></div><div class="card"><p class="muted" data-ar="أدخل المدينة والدولة لجلب المواقيت." data-en="Enter a city and country to retrieve prayer times.">أدخل المدينة والدولة لجلب المواقيت.</p><div class="row"><input id="city" value="Mombasa" aria-label="City" placeholder="City"><input id="country" value="Kenya" aria-label="Country" placeholder="Country"><button class="btn" id="getTimes" type="button">عرض المواقيت</button></div><p class="feedback" id="prayerStatus" aria-live="polite"></p><div class="prayers" id="prayerTimes"><div class="prayer"><b>الفجر</b>—</div><div class="prayer"><b>الظهر</b>—</div><div class="prayer"><b>العصر</b>—</div><div class="prayer"><b>المغرب</b>—</div><div class="prayer"><b>العشاء</b>—</div></div><p class="muted">المصدر: AlAdhan API. قد تختلف طرق الحساب؛ يرجى التأكد من المسجد المحلي.</p></div></section>
-<section id="community"><div class="head"><small>مجتمعنا</small><h2 data-ar="انضم إلى مجتمعنا" data-en="Join our community">انضم إلى مجتمعنا</h2></div><div class="card center"><p class="muted">دار الإحسان · Learn · Reflect · Grow</p><a class="btn" href="https://discord.gg/HYpjBD6cV" target="_blank" rel="noopener">انضم إلى Discord</a></div></section>
 
-<section id="about"><div class="head"><small>دار الإحسان</small><h2>عن دار الإحسان</h2></div><div class="info-card"><p class="muted">دار الإحسان مساحة إسلامية للتعلم والذكر والتدبر، وتشجيع المجتمع على نشر العلم النافع والعمل الصالح بأدب واحترام.</p><p class="founder">تأسيس: Sahil Muhammad</p></div></section>
-<section id="public-access"><div class="head"><small>Public Access</small><h2>الوصول العام</h2></div><div class="info-card"><p class="muted">المحتوى العام متاح للزوار، بما في ذلك القرآن والأذكار والتسبيح والمسابقة ومواقيت الصلاة.</p></div></section>
-<section id="premium"><div class="head"><small>Premium</small><h2>العضوية المميزة</h2></div><div class="info-card"><p class="muted">قسم Premium مخصص لعرض المزايا والمعلومات. الاشتراكات والدفع الإلكتروني غير مفعّلين في هذه النسخة.</p></div></section>
-<section id="admin"><div class="head"><small>Private Area</small><h2>منطقة الإدارة</h2></div><div class="info-card"><p class="muted">هذه واجهة تعريفية فقط. لا يوجد تسجيل دخول أو صلاحيات إدارية آمنة مفعّلة في ملف HTML الثابت.</p></div></section>
-<section id="owner"><div class="head"><small>Owner Only</small><h2>منطقة المالك</h2></div><div class="info-card"><p class="muted">هذه واجهة تعريفية فقط. تحكم المالك وإدارة المشرفين يتطلبان خادماً موثوقاً وتسجيل دخول وصلاحيات محفوظة على الخادم.</p></div></section>
-</main><footer class="footer"><div class="wrap">دار الإحسان · May Allah grant us beneficial knowledge and righteous deeds.</div></footer>
 <script>
-'use strict';
-
-const menuToggle = $('menuToggle');
-const siteMenu = $('siteMenu');
-menuToggle.addEventListener('click', () => {
-  const isOpen = menuToggle.getAttribute('aria-expanded') === 'true';
-  menuToggle.setAttribute('aria-expanded', String(!isOpen));
-  menuToggle.setAttribute('aria-label', isOpen ? 'فتح القائمة' : 'إغلاق القائمة');
-  siteMenu.hidden = isOpen;
-  siteMenu.classList.toggle('open', !isOpen);
-});
-siteMenu.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', () => {
-    siteMenu.hidden = true;
-    siteMenu.classList.remove('open');
-    menuToggle.setAttribute('aria-expanded', 'false');
-    menuToggle.setAttribute('aria-label', 'فتح القائمة');
-  });
-});
-document.addEventListener('click', event => {
-  if (!event.target.closest('.menu-wrap')) {
-    siteMenu.hidden = true;
-    siteMenu.classList.remove('open');
-    menuToggle.setAttribute('aria-expanded', 'false');
-    menuToggle.setAttribute('aria-label', 'فتح القائمة');
+(function(){
+  var b=document.body,btn=document.getElementById('lang');
+  function set(l){
+    b.dataset.lang=l;document.documentElement.lang=l;document.documentElement.dir=l==='ar'?'rtl':'ltr';
+    document.querySelectorAll('[data-ar]').forEach(function(e){e.innerHTML=e.getAttribute('data-'+l)});
+    btn.textContent=l==='ar'?'English':'العربية';
+    document.dispatchEvent(new Event('langchange'));
+    try{localStorage.setItem('lang',l)}catch(e){}
   }
-});
-document.addEventListener('keydown', event => {
-  if (event.key === 'Escape') {
-    siteMenu.hidden = true;
-    siteMenu.classList.remove('open');
-    menuToggle.setAttribute('aria-expanded', 'false');
-    menuToggle.setAttribute('aria-label', 'فتح القائمة');
-    menuToggle.focus();
-  }
-});
-
-const $ = id => document.getElementById(id);
-let language = 'ar';
-$('langBtn').addEventListener('click', () => {
-  language = language === 'ar' ? 'en' : 'ar';
-  document.documentElement.lang = language;
-  document.documentElement.dir = language === 'ar' ? 'rtl' : 'ltr';
-  document.querySelectorAll('[data-ar][data-en]').forEach(el => el.textContent = el.dataset[language]);
-  $('langBtn').textContent = language === 'ar' ? 'English' : 'العربية';
-});
-let tasbih = 0;
-$('tasbihTap').addEventListener('click', () => { tasbih += 1; $('tasbihCount').textContent = String(tasbih); $('tasbihMessage').textContent = tasbih % 33 === 0 ? 'أحسنت، أكملت ٣٣ تسبيحة.' : ''; });
-$('tasbihReset').addEventListener('click', () => { tasbih = 0; $('tasbihCount').textContent = '0'; $('tasbihMessage').textContent = 'تم تصفير العداد.'; });
-
-async function loadSurahList() {
-  const select = $('surahSelect');
-  try {
-    const response = await fetch('https://api.alquran.cloud/v1/surah');
-    if (!response.ok) throw new Error('Network response was not OK');
-    const json = await response.json();
-    if (json.code !== 200 || !Array.isArray(json.data) || json.data.length !== 114) throw new Error('Surah list unavailable');
-    select.replaceChildren();
-    json.data.forEach(surah => { const option = document.createElement('option'); option.value = String(surah.number); option.textContent = `${surah.number}. ${surah.name} — ${surah.englishName}`; select.appendChild(option); });
-    $('quranStatus').textContent = 'تم تحميل السور الـ ١١٤.';
-    await displaySurah();
-  } catch (error) { select.innerHTML = '<option value="">تعذر تحميل قائمة السور</option>'; $('quranStatus').textContent = 'تعذر الاتصال بمصدر القرآن. تحقق من اتصال الإنترنت ثم أعد تحميل الصفحة.'; }
-}
-async function displaySurah() {
-  const number = $('surahSelect').value; if (!number) return;
-  $('quranStatus').textContent = 'جارٍ تحميل السورة…'; $('quranText').textContent = '';
-  try {
-    const response = await fetch(`https://api.alquran.cloud/v1/surah/${encodeURIComponent(number)}`);
-    if (!response.ok) throw new Error('Network response was not OK');
-    const json = await response.json();
-    if (json.code !== 200 || !json.data || !Array.isArray(json.data.ayahs)) throw new Error('Surah unavailable');
-    const fragment = document.createDocumentFragment(); const heading = document.createElement('h3'); heading.textContent = `${json.data.name} — ${json.data.englishName}`; fragment.appendChild(heading);
-    json.data.ayahs.forEach(ayah => { const p = document.createElement('p'); p.textContent = `${ayah.text} ۞`; fragment.appendChild(p); });
-    $('quranText').replaceChildren(fragment); $('quranStatus').textContent = `السورة ${json.data.number} · ${json.data.numberOfAyahs} آية`;
-  } catch (error) { $('quranStatus').textContent = 'تعذر تحميل السورة. تحقق من اتصال الإنترنت وحاول مرة أخرى.'; }
-}
-$('loadSurah').addEventListener('click', displaySurah); $('surahSelect').addEventListener('change', displaySurah); loadSurahList();
-
-// Selected morning and evening remembrances. Repetition counters are independent.
-const adhkar = {
- morning: [
-  {text:'أَصْبَحْنَا وَأَصْبَحَ الْمُلْكُ لِلَّهِ، وَالْحَمْدُ لِلَّهِ، لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ.',translation:'We have entered the morning and all sovereignty belongs to Allah. Praise belongs to Allah; there is no god but Allah alone, with no partner. His is the dominion and His is the praise, and He is capable of all things.',count:1,ref:'Sahih Muslim 2723'},
-  {text:'اللَّهُمَّ بِكَ أَصْبَحْنَا، وَبِكَ أَمْسَيْنَا، وَبِكَ نَحْيَا، وَبِكَ نَمُوتُ، وَإِلَيْكَ النُّشُورُ.',translation:'O Allah, by You we reach the morning and by You we reach the evening; by You we live and die, and to You is the resurrection.',count:1,ref:'Jami at-Tirmidhi 3391'},
-  {text:'اللَّهُمَّ أَنْتَ رَبِّي لَا إِلَهَ إِلَّا أَنْتَ، خَلَقْتَنِي وَأَنَا عَبْدُكَ، وَأَنَا عَلَى عَهْدِكَ وَوَعْدِكَ مَا اسْتَطَعْتُ، أَعُوذُ بِكَ مِنْ شَرِّ مَا صَنَعْتُ، أَبُوءُ لَكَ بِنِعْمَتِكَ عَلَيَّ، وَأَبُوءُ بِذَنْبِي فَاغْفِرْ لِي، فَإِنَّهُ لَا يَغْفِرُ الذُّنُوبَ إِلَّا أَنْتَ.',translation:'O Allah, You are my Lord; none has the right to be worshipped but You. You created me and I am Your servant. I keep my covenant and promise to You as best I can. I seek refuge in You from the evil I have done. I acknowledge Your blessings and my sins, so forgive me; none forgives sins but You.',count:1,ref:'Sahih al-Bukhari 6306 (Sayyid al-Istighfar)'},
-  {text:'قُلْ هُوَ اللَّهُ أَحَدٌ ۞ اللَّهُ الصَّمَدُ ۞ لَمْ يَلِدْ وَلَمْ يُولَدْ ۞ وَلَمْ يَكُنْ لَهُ كُفُوًا أَحَدٌ.',translation:'Surah Al-Ikhlas: Allah is One; Allah, the Eternal Refuge. He neither begets nor is born, and none is comparable to Him.',count:3,ref:'Qur’an 112; morning and evening recitation: Sunan Abi Dawud 5082'},
-  {text:'قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ ۞ مِنْ شَرِّ مَا خَلَقَ ۞ وَمِنْ شَرِّ غَاسِقٍ إِذَا وَقَبَ ۞ وَمِنْ شَرِّ النَّفَّاثَاتِ فِي الْعُقَدِ ۞ وَمِنْ شَرِّ حَاسِدٍ إِذَا حَسَدَ.',translation:'Surah Al-Falaq: I seek refuge in the Lord of daybreak from the evil of what He created, the darkness, those who blow on knots, and the envier.',count:3,ref:'Qur’an 113; morning and evening recitation: Sunan Abi Dawud 5082'},
-  {text:'قُلْ أَعُوذُ بِرَبِّ النَّاسِ ۞ مَلِكِ النَّاسِ ۞ إِلَهِ النَّاسِ ۞ مِنْ شَرِّ الْوَسْوَاسِ الْخَنَّاسِ ۞ الَّذِي يُوَسْوِسُ فِي صُدُورِ النَّاسِ ۞ مِنَ الْجِنَّةِ وَالنَّاسِ.',translation:'Surah An-Nas: I seek refuge in the Lord, King and God of mankind from the whisperer who withdraws, who whispers into people’s hearts, from jinn and people.',count:3,ref:'Qur’an 114; morning and evening recitation: Sunan Abi Dawud 5082'},
-  {text:'بِسْمِ اللَّهِ الَّذِي لَا يَضُرُّ مَعَ اسْمِهِ شَيْءٌ فِي الْأَرْضِ وَلَا فِي السَّمَاءِ وَهُوَ السَّمِيعُ الْعَلِيمُ.',translation:'In the name of Allah, with whose name nothing on earth or in heaven can cause harm; He is the All-Hearing, All-Knowing.',count:3,ref:'Sunan Abi Dawud 5088; Jami at-Tirmidhi 3388'}
- ],
- evening: [
-  {text:'أَمْسَيْنَا وَأَمْسَى الْمُلْكُ لِلَّهِ، وَالْحَمْدُ لِلَّهِ، لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ.',translation:'We have entered the evening and all sovereignty belongs to Allah. Praise belongs to Allah; there is no god but Allah alone, with no partner. His is the dominion and His is the praise, and 
+  var s='ar';try{s=localStorage.getItem('lang')||'ar'}catch(e){}
+  set(s);window.__set=set;
+  btn.onclick=function(){set(b.dataset.lang==='ar'?'en':'ar')};
+  var nav=document.getElementById('nav');
+  document.getElementById('menu').onclick=function(){nav.classList.toggle('open')};
+  nav.onclick=function(){nav.classList.remove('open')};
+})();
+</script>
+<script>
+(function(){
+var D=[['SA','السعودية','Saudi Arabia','u',[['مكة المكرمة','Makkah',21.4225,39.8262,'Asia/Riyadh'],['المدينة المنورة','Madinah',24.4686,39.6142,'Asia/Riyadh'],['الرياض','Riyadh',24.
