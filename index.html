@@ -14,13 +14,40 @@
 nav{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 0;flex-wrap:wrap}.brand{font-size:23px;color:var(--gold);font-weight:800;text-decoration:none}.navlinks{display:flex;gap:15px;flex-wrap:wrap}.navlinks a{color:var(--muted);text-decoration:none;font-size:13px}
 button,a{cursor:pointer}.lang,.btn,.small{border-radius:999px;padding:9px 16px;border:1px solid var(--gold);font:inherit}.lang,.small{background:transparent;color:var(--gold)}.btn{background:var(--gold);color:#14251c;text-decoration:none;font-weight:700;display:inline-block}.hero{text-align:center;padding:58px 0 38px}.hero .arabic{font:48px Georgia;color:var(--gold)}h1{font-size:clamp(30px,6vw,48px);margin:5px 0}.founder{color:var(--gold)}.muted{color:var(--muted)}section{padding:24px 0;scroll-margin-top:85px}.head{text-align:center;margin-bottom:17px}.head small{color:var(--gold);letter-spacing:1px}.head h2{margin:3px 0;font-size:27px}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.card{background:linear-gradient(145deg,#12382b,#0b241c);border:1px solid var(--line);border-radius:17px;padding:19px;min-width:0}.card h3{color:var(--gold);margin:0 0 8px}.verse{font:24px/1.9 Georgia;text-align:center;direction:rtl;color:#f5e6bb}.row{display:flex;gap:9px;align-items:center;flex-wrap:wrap}input,select{max-width:100%;padding:11px;background:#061811;color:white;border:1px solid var(--line);border-radius:9px;font:inherit}input{width:100%;margin:5px 0 10px}.row input,.row select{flex:1}.counter{font-size:56px;color:var(--gold);text-align:center;font-weight:800;margin:8px}.counter-btn{width:100%;min-height:92px;border:2px solid var(--gold);border-radius:18px;background:#174333;color:var(--cream);font-size:25px;font-weight:700}.feedback{color:var(--gold);min-height:25px}.prayers{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}.prayer{background:#09251d;border:1px solid var(--line);border-radius:12px;text-align:center;padding:10px}.prayer b{display:block;color:var(--gold)}.option{display:block;width:100%;text-align:start;margin:8px 0;padding:11px;background:#09251d;color:var(--cream);border:1px solid var(--line);border-radius:10px}.option:disabled{opacity:.7}.footer{border-top:1px solid var(--line);padding:25px 0;text-align:center;color:var(--muted);font-size:13px}
 .dhikr-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.dhikr-card{background:#09251d;border:1px solid var(--line);border-radius:14px;padding:15px}.dhikr-text{font:22px/1.9 Georgia;text-align:center;color:#f5e6bb;margin:5px 0 10px}.dhikr-translation{color:var(--muted);font-size:14px}.dhikr-ref{color:var(--gold);font-size:12px;margin-top:8px}.dhikr-controls{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:12px}.dhikr-count{font-size:23px;color:var(--gold);font-weight:800;min-width:35px;text-align:center}.dhikr-controls button{background:var(--gold);color:#14251c;border:0;border-radius:9px;padding:8px 13px;font:inherit;font-weight:700}.dhikr-controls button.reset-one{background:transparent;color:var(--gold);border:1px solid var(--gold)}
-
-.menu-wrap{position:relative;display:inline-block}.menu-trigger{width:44px;height:42px;border:1px solid var(--gold);border-radius:10px;background:#103126;color:var(--gold);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;cursor:pointer;padding:8px}.menu-trigger span{display:block;width:22px;height:2px;border-radius:2px;background:var(--gold)}.menu-panel{display:none;position:absolute;top:50px;inset-inline-end:0;width:min(285px,85vw);padding:10px;background:#0b241c;border:1px solid var(--gold);border-radius:14px;box-shadow:0 12px 30px #0008;z-index:20}.menu-panel.open{display:block}.menu-panel a{display:block;color:var(--cream);text-decoration:none;padding:10px 12px;border-radius:8px}.menu-panel a:hover,.menu-panel a:focus{background:#174333}.info-section{max-width:850px;margin:auto}.info-section p{color:var(--muted)}.status-note{border-inline-start:3px solid var(--gold);padding:10px 13px;background:#09251d;border-radius:8px;color:var(--muted)}
 @media(max-width:700px){.grid,.dhikr-list{grid-template-columns:1fr}.prayers{grid-template-columns:repeat(2,1fr)}.navlinks{width:100%;justify-content:center}.hero{padding-top:35px}}
+
+.menu-wrap{position:relative;display:inline-flex;align-items:center}
+.menu-toggle{width:46px;height:42px;display:inline-flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;background:#103126;border:1px solid var(--gold);border-radius:10px;padding:8px;cursor:pointer}
+.menu-toggle span{display:block;width:21px;height:2px;background:var(--gold);border-radius:3px}
+.menu-toggle:focus-visible,.menu-panel a:focus-visible{outline:2px solid var(--cream);outline-offset:3px}
+.menu-panel{position:absolute;top:calc(100% + 9px);inset-inline-end:0;z-index:20;display:none;width:min(270px,85vw);padding:9px;background:#103126;border:1px solid var(--gold);border-radius:13px;box-shadow:0 12px 32px #0008}
+.menu-panel.open{display:block}
+.menu-panel a{display:block;padding:10px 12px;color:var(--cream);text-decoration:none;border-radius:8px}
+.menu-panel a:hover{background:#174333;color:var(--gold)}
+.menu-panel .menu-external{border-top:1px solid var(--line);margin-top:5px;padding-top:13px}
+.info-card{background:linear-gradient(145deg,#12382b,#0b241c);border:1px solid var(--line);border-radius:17px;padding:19px}
+.info-card h3{color:var(--gold);margin-top:0}
+@media(max-width:700px){.menu-wrap{order:3}.menu-panel{inset-inline-end:0}}
+
 </style>
 </head>
 <body>
-<header><div class="wrap"><nav><a class="brand" href="#home">دار الإحسان</a><div class="navlinks"><a href="#quran">القرآن</a><a href="#adhkar">الأذكار</a><a href="#tasbih">التسبيح</a><a href="#quiz">المسابقة</a><a href="#prayer">الصلاة</a><a href="#community">المجتمع</a></div><div class="row"><button class="lang" id="langBtn" type="button">English</button><div class="menu-wrap"><button class="menu-trigger" id="menuTrigger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="siteMenu"><span></span><span></span><span></span></button><div class="menu-panel" id="siteMenu" role="menu"><a href="#about" role="menuitem" data-ar="عن دار الإحسان" data-en="About Dar Al Ihsan">عن دار الإحسان</a><a href="#public-access" role="menuitem" data-ar="الوصول العام" data-en="Public Access">الوصول العام</a><a href="#premium" role="menuitem" data-ar="العضوية المميزة" data-en="Premium">العضوية المميزة</a><a href="#admin" role="menuitem" data-ar="منطقة الإدارة" data-en="Admin Area">منطقة الإدارة</a><a href="#owner" role="menuitem" data-ar="منطقة المالك" data-en="Owner Area">منطقة المالك</a><a href="https://discord.gg/PPRX7ZbQM" target="_blank" rel="noopener" role="menuitem" data-ar="المساعدة والدعم" data-en="Help &amp; Support">المساعدة والدعم</a></div></div></div></nav></div></header>
+<header><div class="wrap"><nav><a class="brand" href="#home">دار الإحسان</a><div class="navlinks"><a href="#quran">القرآن</a><a href="#adhkar">الأذكار</a><a href="#tasbih">التسبيح</a><a href="#quiz">المسابقة</a><a href="#prayer">الصلاة</a><a href="#community">المجتمع</a></div>
+<div class="menu-wrap">
+<button class="menu-toggle" id="menuToggle" type="button" aria-label="فتح القائمة" aria-expanded="false" aria-controls="siteMenu">
+<span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
+</button>
+<div class="menu-panel" id="siteMenu" hidden>
+<a href="#about">عن دار الإحسان</a>
+<a href="#public-access">الوصول العام</a>
+<a href="#premium">Premium</a>
+<a href="#admin">منطقة الإدارة</a>
+<a href="#owner">منطقة المالك</a>
+<a href="#community">انضم إلى المجتمع</a>
+<a class="menu-external" href="https://discord.gg/PPRX7ZbQM" target="_blank" rel="noopener noreferrer">المساعدة والدعم ↗</a>
+</div>
+</div>
+<button class="lang" id="langBtn" type="button">English</button></nav></div></header>
 <main class="wrap">
 <section class="hero" id="home"><div class="arabic">دار الإحسان</div><h1 data-ar="مرحبًا بكم في دار الإحسان" data-en="Welcome to Dar Al Ihsan">مرحبًا بكم في دار الإحسان</h1><p class="founder">تأسيس: Sahil Muhammad</p><p class="muted" data-ar="مساحة للعلم النافع والذكر والتدبر والعمل الصالح." data-en="A place for beneficial knowledge, remembrance, reflection and good deeds.">مساحة للعلم النافع والذكر والتدبر والعمل الصالح.</p><a class="btn" href="#quran" data-ar="ابدأ الاستكشاف" data-en="Explore">ابدأ الاستكشاف</a></section>
 <section id="quran"><div class="head"><small>القرآن الكريم</small><h2 data-ar="اقرأ القرآن" data-en="Read the Quran">اقرأ القرآن</h2></div><div class="card"><p class="muted" data-ar="اختر أي سورة من السور الـ ١١٤." data-en="Choose any of the 114 surahs.">اختر أي سورة من السور الـ ١١٤.</p><div class="row"><select id="surahSelect" aria-label="Choose surah"><option value="">جارٍ تحميل قائمة السور…</option></select><button class="btn" id="loadSurah" type="button">عرض السورة</button></div><p class="feedback" id="quranStatus" aria-live="polite"></p><div id="quranText" class="verse" aria-live="polite">اختر سورة لعرضها هنا.</div></div></section>
@@ -34,35 +61,54 @@ button,a{cursor:pointer}.lang,.btn,.small{border-radius:999px;padding:9px 16px;b
 <section id="tasbih"><div class="head"><small>الذكر</small><h2 data-ar="السبحة الإلكترونية" data-en="Digital Tasbih">السبحة الإلكترونية</h2></div><div class="card center"><p class="muted" data-ar="اضغط على الزر لزيادة العدد." data-en="Tap the button to increase the count.">اضغط على الزر لزيادة العدد.</p><div class="counter" id="tasbihCount" aria-live="polite">0</div><button class="counter-btn" id="tasbihTap" type="button">سُبْحَانَ اللَّهِ</button><p><button class="small" id="tasbihReset" type="button">إعادة التصفير</button></p><p class="muted" id="tasbihMessage"></p></div></section>
 <section id="quiz"><div class="head"><small>اختبر معلوماتك</small><h2 data-ar="المسابقة الإسلامية" data-en="Islamic Quiz">المسابقة الإسلامية</h2></div><div class="card"><p id="quizQuestion"></p><div id="quizOptions"></div><p class="feedback" id="quizFeedback" aria-live="polite"></p><button class="btn" id="nextQuestion" type="button">السؤال التالي</button></div></section>
 <section id="prayer"><div class="head"><small>العبادة اليومية</small><h2 data-ar="مواقيت الصلاة" data-en="Prayer Times">مواقيت الصلاة</h2></div><div class="card"><p class="muted" data-ar="أدخل المدينة والدولة لجلب المواقيت." data-en="Enter a city and country to retrieve prayer times.">أدخل المدينة والدولة لجلب المواقيت.</p><div class="row"><input id="city" value="Mombasa" aria-label="City" placeholder="City"><input id="country" value="Kenya" aria-label="Country" placeholder="Country"><button class="btn" id="getTimes" type="button">عرض المواقيت</button></div><p class="feedback" id="prayerStatus" aria-live="polite"></p><div class="prayers" id="prayerTimes"><div class="prayer"><b>الفجر</b>—</div><div class="prayer"><b>الظهر</b>—</div><div class="prayer"><b>العصر</b>—</div><div class="prayer"><b>المغرب</b>—</div><div class="prayer"><b>العشاء</b>—</div></div><p class="muted">المصدر: AlAdhan API. قد تختلف طرق الحساب؛ يرجى التأكد من المسجد المحلي.</p></div></section>
-<section id="about"><div class="head"><small>ABOUT</small><h2 data-ar="عن دار الإحسان" data-en="About Dar Al Ihsan">عن دار الإحسان</h2></div><div class="card info-section"><p data-ar="دار الإحسان مساحة إسلامية تهدف إلى نشر العلم النافع، وتيسير الذكر، وتشجيع التأمل والعمل الصالح في مجتمع متعاون." data-en="Dar Al Ihsan is an Islamic space dedicated to beneficial knowledge, remembrance, reflection, and good deeds within a welcoming community.">دار الإحسان مساحة إسلامية تهدف إلى نشر العلم النافع، وتيسير الذكر، وتشجيع التأمل والعمل الصالح في مجتمع متعاون.</p><p class="founder">تأسيس: Sahil Muhammad</p></div></section>
-<section id="public-access"><div class="head"><small>PUBLIC</small><h2 data-ar="الوصول العام" data-en="Public Access">الوصول العام</h2></div><div class="card info-section"><p data-ar="يمكن لجميع الزوار استخدام المحتوى والميزات العامة المتاحة على الموقع، مثل القرآن والأذكار والسبحة والمسابقة ومواقيت الصلاة، دون الحاجة إلى حساب إداري." data-en="All visitors can use the public website features, including Quran reading, Adhkar, Tasbih, the quiz, and prayer times, without an administrator account.">يمكن لجميع الزوار استخدام المحتوى والميزات العامة المتاحة على الموقع، مثل القرآن والأذكار والسبحة والمسابقة ومواقيت الصلاة، دون الحاجة إلى حساب إداري.</p></div></section>
-<section id="premium"><div class="head"><small>PREMIUM</small><h2 data-ar="العضوية المميزة" data-en="Premium Membership">العضوية المميزة</h2></div><div class="card info-section"><p data-ar="ستُعلن هنا مزايا العضوية المميزة عند جاهزيتها. قد تشمل مزايا إضافية وتجارب خاصة داخل دار الإحسان." data-en="Premium benefits will be announced here when they are ready. They may include additional features and special experiences within Dar Al Ihsan.">ستُعلن هنا مزايا العضوية المميزة عند جاهزيتها. قد تشمل مزايا إضافية وتجارب خاصة داخل دار الإحسان.</p><p class="status-note" data-ar="الحالة: معلومات فقط — الاشتراكات والدفع غير مفعّلين حاليًا. لا ترسل أي أموال إلى أي شخص يدّعي بيع العضوية." data-en="Status: Information only — subscriptions and payments are not enabled yet. Do not send money to anyone claiming to sell membership.">الحالة: معلومات فقط — الاشتراكات والدفع غير مفعّلين حاليًا. لا ترسل أي أموال إلى أي شخص يدّعي بيع العضوية.</p></div></section>
-<section id="admin"><div class="head"><small>RESTRICTED</small><h2 data-ar="منطقة الإدارة" data-en="Admin Area">منطقة الإدارة</h2></div><div class="card info-section"><p data-ar="هذه المنطقة مخصصة للمشرفين المعتمدين لإدارة محتوى وخدمات الموقع وفق الصلاحيات الممنوحة لهم." data-en="This area is intended for approved administrators to manage website content and services according to their assigned permissions.">هذه المنطقة مخصصة للمشرفين المعتمدين لإدارة محتوى وخدمات الموقع وفق الصلاحيات الممنوحة لهم.</p><p class="status-note" data-ar="الدخول الإداري غير مفعّل بعد. يلزم إعداد تسجيل دخول آمن وخادم للتحقق من الصلاحيات قبل استخدام هذه المنطقة." data-en="Administrator sign-in is not enabled yet. Secure authentication and server-side permission checks must be implemented before this area can be used.">الدخول الإداري غير مفعّل بعد. يلزم إعداد تسجيل دخول آمن وخادم للتحقق من الصلاحيات قبل استخدام هذه المنطقة.</p></div></section>
-<section id="owner"><div class="head"><small>OWNER ONLY</small><h2 data-ar="منطقة المالك" data-en="Owner Area">منطقة المالك</h2></div><div class="card info-section"><p data-ar="هذه المنطقة مخصصة لمالك دار الإحسان فقط، وتشمل مستقبلًا التحكم العام وإدارة المشرفين والإعدادات الأساسية." data-en="This area is reserved for the owner of Dar Al Ihsan and is intended to provide global controls, administrator management, and core settings in the future.">هذه المنطقة مخصصة لمالك دار الإحسان فقط، وتشمل مستقبلًا التحكم العام وإدارة المشرفين والإعدادات الأساسية.</p><p class="status-note" data-ar="منطقة المالك غير مفعّلة بعد. لن تكون محمية فعليًا حتى يُضاف نظام مصادقة وصلاحيات آمن من جهة الخادم." data-en="The owner area is not enabled yet. It will not be genuinely protected until secure server-side authentication and authorization are added.">منطقة المالك غير مفعّلة بعد. لن تكون محمية فعليًا حتى يُضاف نظام مصادقة وصلاحيات آمن من جهة الخادم.</p></div></section>
 <section id="community"><div class="head"><small>مجتمعنا</small><h2 data-ar="انضم إلى مجتمعنا" data-en="Join our community">انضم إلى مجتمعنا</h2></div><div class="card center"><p class="muted">دار الإحسان · Learn · Reflect · Grow</p><a class="btn" href="https://discord.gg/HYpjBD6cV" target="_blank" rel="noopener">انضم إلى Discord</a></div></section>
+
+<section id="about"><div class="head"><small>دار الإحسان</small><h2>عن دار الإحسان</h2></div><div class="info-card"><p class="muted">دار الإحسان مساحة إسلامية للتعلم والذكر والتدبر، وتشجيع المجتمع على نشر العلم النافع والعمل الصالح بأدب واحترام.</p><p class="founder">تأسيس: Sahil Muhammad</p></div></section>
+<section id="public-access"><div class="head"><small>Public Access</small><h2>الوصول العام</h2></div><div class="info-card"><p class="muted">المحتوى العام متاح للزوار، بما في ذلك القرآن والأذكار والتسبيح والمسابقة ومواقيت الصلاة.</p></div></section>
+<section id="premium"><div class="head"><small>Premium</small><h2>العضوية المميزة</h2></div><div class="info-card"><p class="muted">قسم Premium مخصص لعرض المزايا والمعلومات. الاشتراكات والدفع الإلكتروني غير مفعّلين في هذه النسخة.</p></div></section>
+<section id="admin"><div class="head"><small>Private Area</small><h2>منطقة الإدارة</h2></div><div class="info-card"><p class="muted">هذه واجهة تعريفية فقط. لا يوجد تسجيل دخول أو صلاحيات إدارية آمنة مفعّلة في ملف HTML الثابت.</p></div></section>
+<section id="owner"><div class="head"><small>Owner Only</small><h2>منطقة المالك</h2></div><div class="info-card"><p class="muted">هذه واجهة تعريفية فقط. تحكم المالك وإدارة المشرفين يتطلبان خادماً موثوقاً وتسجيل دخول وصلاحيات محفوظة على الخادم.</p></div></section>
 </main><footer class="footer"><div class="wrap">دار الإحسان · May Allah grant us beneficial knowledge and righteous deeds.</div></footer>
 <script>
 'use strict';
-const $ = id => document.getElementById(id);
-let language = 'ar';
-const menuTrigger = $('menuTrigger');
+
+const menuToggle = $('menuToggle');
 const siteMenu = $('siteMenu');
-menuTrigger.addEventListener('click', () => {
-  const isOpen = siteMenu.classList.toggle('open');
-  menuTrigger.setAttribute('aria-expanded', String(isOpen));
+menuToggle.addEventListener('click', () => {
+  const isOpen = menuToggle.getAttribute('aria-expanded') === 'true';
+  menuToggle.setAttribute('aria-expanded', String(!isOpen));
+  menuToggle.setAttribute('aria-label', isOpen ? 'فتح القائمة' : 'إغلاق القائمة');
+  siteMenu.hidden = isOpen;
+  siteMenu.classList.toggle('open', !isOpen);
 });
-siteMenu.addEventListener('click', event => {
-  if (event.target.closest('a')) {
+siteMenu.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => {
+    siteMenu.hidden = true;
     siteMenu.classList.remove('open');
-    menuTrigger.setAttribute('aria-expanded', 'false');
-  }
+    menuToggle.setAttribute('aria-expanded', 'false');
+    menuToggle.setAttribute('aria-label', 'فتح القائمة');
+  });
 });
 document.addEventListener('click', event => {
   if (!event.target.closest('.menu-wrap')) {
+    siteMenu.hidden = true;
     siteMenu.classList.remove('open');
-    menuTrigger.setAttribute('aria-expanded', 'false');
+    menuToggle.setAttribute('aria-expanded', 'false');
+    menuToggle.setAttribute('aria-label', 'فتح القائمة');
   }
 });
+document.addEventListener('keydown', event => {
+  if (event.key === 'Escape') {
+    siteMenu.hidden = true;
+    siteMenu.classList.remove('open');
+    menuToggle.setAttribute('aria-expanded', 'false');
+    menuToggle.setAttribute('aria-label', 'فتح القائمة');
+    menuToggle.focus();
+  }
+});
+
+const $ = id => document.getElementById(id);
+let language = 'ar';
 $('langBtn').addEventListener('click', () => {
   language = language === 'ar' ? 'en' : 'ar';
   document.documentElement.lang = language;
@@ -107,4 +153,11 @@ const adhkar = {
  morning: [
   {text:'أَصْبَحْنَا وَأَصْبَحَ الْمُلْكُ لِلَّهِ، وَالْحَمْدُ لِلَّهِ، لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ.',translation:'We have entered the morning and all sovereignty belongs to Allah. Praise belongs to Allah; there is no god but Allah alone, with no partner. His is the dominion and His is the praise, and He is capable of all things.',count:1,ref:'Sahih Muslim 2723'},
   {text:'اللَّهُمَّ بِكَ أَصْبَحْنَا، وَبِكَ أَمْسَيْنَا، وَبِكَ نَحْيَا، وَبِكَ نَمُوتُ، وَإِلَيْكَ النُّشُورُ.',translation:'O Allah, by You we reach the morning and by You we reach the evening; by You we live and die, and to You is the resurrection.',count:1,ref:'Jami at-Tirmidhi 3391'},
-  {text:'اللَّهُمَّ أَنْتَ رَبِّي لَا إِلَهَ إِلَّا أَنْتَ، خَلَقْتَنِي وَأَنَا عَبْدُكَ، وَأَنَا عَلَى عَهْدِكَ وَوَعْدِكَ مَا اسْتَطَعْتُ، أَعُوذُ بِكَ مِنْ شَرِّ مَا صَنَعْتُ، أَبُوءُ لَكَ بِنِعْمَتِكَ عَلَيَّ، وَأَبُوءُ بِذَنْبِي فَاغْفِرْ لِي، فَإِنَّهُ لَا يَغْفِرُ الذُّنُوبَ إِلَّا أَنْتَ.',translation:'O Allah, You are my Lord; none has the right to be worshipped but You. You created me and I am Your 
+  {text:'اللَّهُمَّ أَنْتَ رَبِّي لَا إِلَهَ إِلَّا أَنْتَ، خَلَقْتَنِي وَأَنَا عَبْدُكَ، وَأَنَا عَلَى عَهْدِكَ وَوَعْدِكَ مَا اسْتَطَعْتُ، أَعُوذُ بِكَ مِنْ شَرِّ مَا صَنَعْتُ، أَبُوءُ لَكَ بِنِعْمَتِكَ عَلَيَّ، وَأَبُوءُ بِذَنْبِي فَاغْفِرْ لِي، فَإِنَّهُ لَا يَغْفِرُ الذُّنُوبَ إِلَّا أَنْتَ.',translation:'O Allah, You are my Lord; none has the right to be worshipped but You. You created me and I am Your servant. I keep my covenant and promise to You as best I can. I seek refuge in You from the evil I have done. I acknowledge Your blessings and my sins, so forgive me; none forgives sins but You.',count:1,ref:'Sahih al-Bukhari 6306 (Sayyid al-Istighfar)'},
+  {text:'قُلْ هُوَ اللَّهُ أَحَدٌ ۞ اللَّهُ الصَّمَدُ ۞ لَمْ يَلِدْ وَلَمْ يُولَدْ ۞ وَلَمْ يَكُنْ لَهُ كُفُوًا أَحَدٌ.',translation:'Surah Al-Ikhlas: Allah is One; Allah, the Eternal Refuge. He neither begets nor is born, and none is comparable to Him.',count:3,ref:'Qur’an 112; morning and evening recitation: Sunan Abi Dawud 5082'},
+  {text:'قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ ۞ مِنْ شَرِّ مَا خَلَقَ ۞ وَمِنْ شَرِّ غَاسِقٍ إِذَا وَقَبَ ۞ وَمِنْ شَرِّ النَّفَّاثَاتِ فِي الْعُقَدِ ۞ وَمِنْ شَرِّ حَاسِدٍ إِذَا حَسَدَ.',translation:'Surah Al-Falaq: I seek refuge in the Lord of daybreak from the evil of what He created, the darkness, those who blow on knots, and the envier.',count:3,ref:'Qur’an 113; morning and evening recitation: Sunan Abi Dawud 5082'},
+  {text:'قُلْ أَعُوذُ بِرَبِّ النَّاسِ ۞ مَلِكِ النَّاسِ ۞ إِلَهِ النَّاسِ ۞ مِنْ شَرِّ الْوَسْوَاسِ الْخَنَّاسِ ۞ الَّذِي يُوَسْوِسُ فِي صُدُورِ النَّاسِ ۞ مِنَ الْجِنَّةِ وَالنَّاسِ.',translation:'Surah An-Nas: I seek refuge in the Lord, King and God of mankind from the whisperer who withdraws, who whispers into people’s hearts, from jinn and people.',count:3,ref:'Qur’an 114; morning and evening recitation: Sunan Abi Dawud 5082'},
+  {text:'بِسْمِ اللَّهِ الَّذِي لَا يَضُرُّ مَعَ اسْمِهِ شَيْءٌ فِي الْأَرْضِ وَلَا فِي السَّمَاءِ وَهُوَ السَّمِيعُ الْعَلِيمُ.',translation:'In the name of Allah, with whose name nothing on earth or in heaven can cause harm; He is the All-Hearing, All-Knowing.',count:3,ref:'Sunan Abi Dawud 5088; Jami at-Tirmidhi 3388'}
+ ],
+ evening: [
+  {text:'أَمْسَيْنَا وَأَمْسَى الْمُلْكُ لِلَّهِ، وَالْحَمْدُ لِلَّهِ، لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ.',translation:'We have entered the evening and all sovereignty belongs to Allah. Praise belongs to Allah; there is no god but Allah alone, with no partner. His is the dominion and His is the praise, and 
