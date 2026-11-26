@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>دار إحسان | Dar Ihsan</title>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&amp;family=Cormorant+Garamond:wght@500;700&amp;display=swap" rel="stylesheet">
+<style>
+:root{--bg:#070705;--card:#12110c;--line:#3a3322;--gold:#d9b878;--gold2:#b8935a;--txt:#f1e8d4;--mut:#a59d88;color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--txt);font-family:'Amiri',Georgia,serif;line-height:1.9;font-size:18px}
+body[data-lang=en]{font-family:'Cormorant Garamond',Georgia,serif;font-size:20px}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1000px;margin:auto;padding:0 20px}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:rgba(7,7,5,.92);backdrop-filter:blur(8px);border-bottom:1px solid #1d1a12}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:12px 20px;max-width:1000px;margin:auto}
+.logo{font-size:26px;font-weight:700;color:var(--gold);letter-spacing:.5px}
+.logo small{display:block;font-size:11px;color:var(--mut);letter-spacing:3px;line-height:1;font-weight:400}
+nav{display:flex;gap:18px;align-items:center}
+nav a{color:var(--mut);font-size:16px}nav a:hover{color:var(--gold)}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:10px 22px;border-radius:99px;border:1px solid var(--gold2);color:var(--gold);background:transparent;font:inherit;cursor:pointer}
+.btn.fill{background:linear-gradient(135deg,#f0dfb4,#b8935a);color:#1a1408;border:0;font-weight:700}
+.menu{display:none;width:42px;height:42px;border-radius:50%;border:1px solid var(--line);background:var(--card);color:var(--gold);cursor:pointer}
+.hero{text-align:center;padding:80px 0 60px;background:radial-gradient(ellipse at top,#1a1608 0,transparent 65%)}
+.hero h1{font-size:clamp(34px,7vw,64px);margin:0 0 16px;line-height:1.4;background:linear-gradient(180deg,#f6ecd0,#b8935a);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{color:var(--mut);max-width:600px;margin:0 auto 30px}
+.cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+h2{text-align:center;font-size:clamp(28px,5vw,40px);color:var(--gold);margin:70px 0 30px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+.card{background:linear-gradient(145deg,var(--card),#1b1810);border:1px solid var(--line);border-radius:26px;padding:26px;transition:.25s}
+.card:hover{border-color:var(--gold2);transform:translateY(-3px)}
+.ico{width:62px;height:62px;border-radius:18px;border:1px solid var(--line);display:grid;place-items:center;margin-bottom:14px;background:#0d0c08}
+.ico svg{width:30px;height:30px;stroke:var(--gold);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.card h3{margin:0 0 6px;font-size:23px;color:var(--txt)}.card p{margin:0;color:var(--mut);font-size:16px}
+.verse{text-align:center;font-size:clamp(24px,4vw,34px);color:var(--gold);padding:50px 0 0}
+.premium{margin-top:70px;border:1px solid var(--gold2);border-radius:34px;padding:44px 28px;text-align:center;background:radial-gradient(ellipse at top,#241d0c,var(--card) 70%);position:relative;overflow:hidden}
+.badge{display:inline-block;padding:4px 18px;border-radius:99px;background:linear-gradient(135deg,#f0dfb4,#b8935a);color:#1a1408;font-size:15px;font-weight:700;margin-bottom:16px}
+.premium h2{margin:0 0 16px}.premium p{max-width:700px;margin:0 auto 14px;color:#cfc6b0}
+.free{font-size:22px;color:var(--gold)}
+.perks{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:22px 0 0;padding:0;list-style:none}
+.perks li{border:1px solid var(--line);border-radius:99px;padding:4px 18px;font-size:15px;color:var(--mut)}
+.join{margin-top:70px;text-align:center;border:1px solid var(--line);border-radius:34px;padding:44px 24px;background:var(--card)}
+.join h2{margin:0 0 10px}.join p{color:var(--mut);margin:0 0 22px}
+footer{margin-top:70px;border-top:1px solid #1d1a12;padding:40px 0 30px}
+.fcols{display:flex;flex-wrap:wrap;gap:40px;justify-content:space-between}
+.fcols h4{margin:0 0 10px;color:var(--gold)}.fcols a{display:block;color:var(--mut);font-size:16px}.fcols a:hover{color:var(--gold)}
+.copy{text-align:center;color:var(--mut);font-size:14px;margin-top:30px}
+@media(max-width:760px){nav{display:none;position:absolute;top:100%;inset-inline:0;background:#0a0a07;flex-direction:column;padding:20px;border-bottom:1px solid var(--line)}nav.open{display:flex}.menu{display:block}.hero{padding-top:50px}}
+[hidden]{display:none!important}
+.pcard{border:1px solid var(--line);border-radius:34px;padding:28px 20px;background:radial-gradient(ellipse at top,#1a1608,var(--card) 60%);text-align:center}
+.sel{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+.sel select{flex:1;min-width:140px;background:#16140d;color:var(--gold);border:1px solid var(--gold2);border-radius:99px;padding:10px 16px;font:inherit;font-size:17px}
+.pdate{margin:18px 0;color:var(--mut);border-bottom:1px solid var(--line);padding-bottom:14px}
+.next small{color:var(--mut)}.next b{display:block;font-size:42px;color:var(--gold);line-height:1.3}
+.cd{font-size:44px;letter-spacing:2px;font-family:Georgia,serif;direction:ltr}
+.pgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:24px 0}
+@media(min-width:700px){.pgrid{grid-template-columns:repeat(3,1fr)}}
+.pt{position:relative;border:1px solid var(--line);border-radius:22px;padding:20px 8px 14px;background:#0d0c08}
+.pt svg{width:34px;height:34px;stroke:var(--gold2);fill:none;stroke-width:1.5;stroke-linecap:round}
+.pt div{font-size:20px}.pt b{display:block;font-size:24px;color:var(--txt)}
+.pt.nx{background:linear-gradient(135deg,#f0dfb4,#b8935a);border:0}.pt.nx *{color:#1a1408;stroke:#1a1408}
+.pt.cu{border-color:var(--gold)}
+.tag{position:absolute;top:-12px;inset-inline:0;margin:auto;width:max-content;padding:0 14px;border-radius:99px;background:var(--gold);color:#1a1408;font-size:14px}
+.qib{display:flex;align-items:center;justify-content:center;gap:24px;flex-wrap:wrap;border:1px solid var(--line);border-radius:24px;padding:18px}
+.qib svg{width:120px;height:120px}
+.note{color:var(--mut);font-size:14px;margin:16px 0 0}
+.pay{max-width:560px;margin:30px auto 0;border:1px solid var(--line);border-radius:24px;padding:22px;background:#0d0c08;text-align:start}
+.pay h3{margin:0 0 10px;color:var(--gold);text-align:center}.pay ol{margin:0 0 16px;padding-inline-start:22px;color:#cfc6b0}
+.pay input{width:100%;margin-top:8px;background:#16140d;color:var(--txt);border:1px solid var(--line);border-radius:12px;padding:12px;font:inherit;font-size:16px}
+.pay .note{text-align:center}
+#acct{position:fixed;inset:0;z-index:30;background:rgba(0,0,0,.75);display:flex;align-items:center;justify-content:center;padding:14px}
+.acard{width:100%;max-width:560px;max-height:88vh;overflow:auto;background:#0d0c08;border:1px solid var(--gold2);border-radius:24px;padding:20px;text-align:start}
+.acard h3{margin:0 0 6px;color:var(--gold)}.acard h4{margin:18px 0 8px;color:var(--gold);border-top:1px solid var(--line);padding-top:12px}
+.acard .r{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap;border:1px solid var(--line);border-radius:14px;padding:8px 12px;margin:6px 0;font-size:15px}
+.acard .b{padding:3px 14px;font-size:14px}.acard input{background:#16140d;color:var(--txt);border:1px solid var(--line);border-radius:12px;padding:8px 12px;font:inherit;font-size:15px;width:100%;margin:6px 0}
+</style>
+</head>
+<body data-lang="ar">
+<noscript><p style="text-align:center;color:#d9b878;padding:20px">Please enable JavaScript to view this page. | يرجى تفعيل جافاسكربت.</p></noscript>
+<svg width="0" height="0" style="position:absolute"><defs>
+<symbol id="i-quran" viewBox="0 0 24 24"><path d="M12 6c-2-1.5-5-2-9-1.5v13c4-.5 7 0 9 1.5 2-1.5 5-2 9-1.5v-13C17 4 14 4.500 12 6zM12 6v13"></path></symbol>
+<symbol id="i-dhikr" viewBox="0 0 24 24"><circle cx="12" cy="5" r="1.600"></circle><circle cx="17.500" cy="8" r="1.600"></circle><circle cx="17.500" cy="14" r="1.600"></circle><circle cx="6.500" cy="8" r="1.600"></circle><circle cx="6.500" cy="14" r="1.600"></circle><path d="M12 17v5M10 22h4"></path></symbol>
+<symbol id="i-mic" viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3"></rect><path d="M5 11a7 7 0 0014 0M12 18v3M9 21h6"></path></symbol>
+<symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14.500A8 8 0 019.500 4 8 8 0 1020 14.500z"></path></symbol>
+<symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></symbol>
+<symbol id="i-term" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="3"></rect><path d="M7 10l3 2-3 2M12 15h5"></path></symbol>
+<symbol id="i-discord" viewBox="0 0 24 24"><path d="M7 7c3-1.500 7-1.500 10 0 2 3 3 6 3 9-1.500 1.500-3 2-4 2l-1-2c-2 .5-4 .5-6 0l-1 2c-1 0-2.500-.5-4-2 0-3 1-6 3-9z"></path><circle cx="9.500" cy="12.500" r="1"></circle><circle cx="14.500" cy="12.500" r="1"></circle></symbol>
+<symbol id='i-sun' viewBox='0 0 24 24'><circle cx='12' cy='12' r='4'/><path d='M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2'/></symbol>
+</defs></svg>
+<header><div class="bar">
+  <a class="logo" href="#top"><span data-ar="دار إحسان" data-en="Dar Ihsan">دار إحسان</span><small>DAR IHSAN</small></a>
+  <nav id="nav">
+    <a href="#features" data-ar="المميزات" data-en="Features">المميزات</a>
+    <a href="#prayer" data-ar="مواقيت الصلاة" data-en="Prayer times">مواقيت الصلاة</a>
+    <a href="#premium" data-ar="بريميوم" data-en="Premium">بريميوم</a>
+    <a href="#join" data-ar="المجتمع" data-en="Community">المجتمع</a>
+  </nav>
+  <div style="display:flex;gap:8px;align-items:center">
+    <button class="btn" id="loginBtn" style="padding:8px 16px;font-size:16px">تسجيل الدخول</button>
+    <button class="btn" id="lang" aria-label="Language">English</button>
+    <button class="menu" id="menu" aria-label="Menu"><svg width="20" height="20" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></button>
+  </div>
+</div></header>
+<main id="top">
+<section class="hero"><div class="wrap">
+  <h1 data-ar="أَلَا بِذِكْرِ اللَّهِ تَطْمَئِنُّ الْقُلُوبُ" data-en="Verily, in the remembrance of Allah do hearts find rest.">أَلَا بِذِكْرِ اللَّهِ تَطْمَئِنُّ الْقُلُوبُ</h1>
+  <p data-ar="دار إحسان رفيقك اليومي للقرآن والأذكار ومواقيت الصلاة، بتصميم هادئ يليق بخشوع القلب." data-en="Dar Ihsan is your daily companion for the Quran, remembrances and prayer times, in a calm design that suits a humble heart.">دار إحسان رفيقك اليومي للقرآن والأذكار ومواقيت الصلاة، بتصميم هادئ يليق بخشوع القلب.</p>
+  <div class="cta">
+    <a class="btn fill" href="#join"><svg width="20" height="20" viewBox="0 0 24 24" style="stroke:#1a1408;fill:none;stroke-width:1.500"><use href="#i-discord"></use></svg><span data-ar="انضم إلى المجتمع" data-en="Join the community">انضم إلى المجتمع</span></a>
+    <a class="btn" href="#features" data-ar="اكتشف المميزات" data-en="Explore features">اكتشف المميزات</a>
+  </div>
+</div></section>
+<div class="wrap" id="features">
+  <h2 data-ar="كل ما تحتاجه في مكان واحد" data-en="Everything you need in one place">كل ما تحتاجه في مكان واحد</h2>
+  <div class="grid">
+    <div class="card"><div class="ico"><svg><use href="#i-quran"></use></svg></div><h3 data-ar="القرآن الكريم" data-en="The Holy Quran">القرآن الكريم</h3><p data-ar="المصحف كاملًا مع التفسير والتلاوة." data-en="The complete Mushaf with tafsir and recitation.">المصحف كاملًا مع التفسير والتلاوة.</p></div>
+    <div class="card"><div class="ico"><svg><use href="#i-dhikr"></use></svg></div><h3 data-ar="الأذكار والتحصين" data-en="Remembrances &amp; Supplications">الأذكار والتحصين</h3><p data-ar="أذكار الصباح والمساء والنوم والاستيقاظ وبعد الصلاة، مع عدّاد يتجدد كل يوم." data-en="Morning, evening, sleep, waking and post-prayer adhkar, with a counter that renews every day.">أذكار الصباح والمساء والنوم والاستيقاظ وبعد الصلاة، مع عدّاد يتجدد كل يوم.</p></div>
+    <div class="card"><div class="ico"><svg><use href="#i-mic"></use></svg></div><h3 data-ar="ترتيل" data-en="Tarteel">ترتيل</h3><p data-ar="اقرأ من حفظك ودَع التطبيق يسمعك ويصحّح لك كلمةً كلمة." data-en="Recite from memory and let it listen and correct you word by word.">اقرأ من حفظك ودَع التطبيق يسمعك ويصحّح لك كلمةً كلمة.</p></div>
+    <div class="card"><div class="ico"><svg><use href="#i-moon"></use></svg></div><h3 data-ar="أسماء الله الحسنى" data-en="The 99 Names of Allah">أسماء الله الحسنى</h3><p data-ar="الأسماء التسعة والتسعون مع معانيها." data-en="All 99 names with their meanings.">الأسماء التسعة والتسعون مع معانيها.</p></div>
+    <div class="card"><div class="ico"><svg><use href="#i-clock"></use></svg></div><h3 data-ar="مواقيت الصلاة" data-en="Prayer Times">مواقيت الصلاة</h3><p data-ar="أوقات دقيقة حسب مدينتك مع العدّ التنازلي للصلاة القادمة واتجاه القبلة." data-en="Accurate times for your city with a countdown to the next prayer and the Qibla direction.">أوقات دقيقة حسب مدينتك مع العدّ التنازلي للصلاة القادمة واتجاه القبلة.</p></div>
+    <div class="card"><div class="ico"><svg><use href="#i-term"></use></svg></div><h3 data-ar="لوحة التحكم والأوامر" data-en="Control Panel &amp; Commands">لوحة التحكم والأوامر</h3><p data-ar="اضبط كل شيء من المتصفح دون حفظ أوامر أو نسخ معرّفات." data-en="Set everything up from the browser, no commands to memorize or IDs to copy.">اضبط كل شيء من المتصفح دون حفظ أوامر أو نسخ معرّفات.</p></div>
+  </div>
+  <section id='prayer'>
+<h2 data-ar='مواقيت الصلاة' data-en='Prayer Times'>مواقيت الصلاة</h2>
+<div class='pcard'>
+<div class='sel'><select id='pCo' aria-label='Country'></select><select id='pCi' aria-label='City'></select></div>
+<div class='pdate'><div id='pG'></div><div id='pH'></div></div>
+<div class='next'><small data-ar='الصلاة القادمة' data-en='Next prayer'>الصلاة القادمة</small><b id='pN'></b><div class='cd' id='pC'></div><small id='pAt'></small></div>
+<div class='pgrid' id='pGrid'></div>
+<div class='qib'><svg viewBox='0 0 100 100'><circle cx='50' cy='50' r='46' fill='none' stroke='#b8935a' stroke-width='1.5'/><text x='50' y='17' text-anchor='middle' font-size='9' fill='#a59d88'>N</text><g id='qN'><path d='M50 20 L57 52 L43 52Z' fill='#d9b878'/><circle cx='50' cy='52' r='3.5' fill='#d9b878'/></g></svg><div><div data-ar='اتجاه القبلة' data-en='Qibla direction'>اتجاه القبلة</div><b id='pQ' style='font-size:28px;color:var(--gold)'></b><div><button class='btn' id='pCompass' data-ar='تفعيل البوصلة' data-en='Activate the compass'>تفعيل البوصلة</button></div></div></div>
+<p class='note' data-ar='الأوقات تقديرية محسوبة فلكيًا؛ يُرجى مطابقتها مع إعلان مسجدك المحلي.' data-en='Times are astronomical estimates; please check them against your local mosque.'>الأوقات تقديرية محسوبة فلكيًا؛ يُرجى مطابقتها مع إعلان مسجدك المحلي.</p>
+</div></section>
+  <section class="premium" id="premium">
+    <span class="badge" data-ar="عرض حصري" data-en="Exclusive Offer">عرض حصري</span>
+    <h2 data-ar="بريميوم مجانًا لمدة 4 أشهر: عرض حصري" data-en="Premium free for 4 months: an exclusive offer">بريميوم مجانًا لمدة 4 أشهر: عرض حصري</h2>
+    <p data-ar="باقة بريميوم صُمّمت لمجتمعنا: مزايا حصرية، وخصائص إضافية، وأولوية في الوصول والدعم، مع تحديثات جديدة نضيفها باستمرار بإذن الله. بدعمك تساعدنا على الاستمرار وتطوير ما ينفع الناس في ذكر الله وتلاوة كتابه." data-en="Premium is built for our community: exclusive perks, extra features, priority access and support, and new updates added continuously, God willing. By supporting us you help us keep going and build more of what helps people remember Allah and recite His Book.">باقة بريميوم صُمّمت لمجتمعنا: مزايا حصرية، وخصائص إضافية، وأولوية في الوصول والدعم، مع تحديثات جديدة نضيفها باستمرار بإذن الله. بدعمك تساعدنا على الاستمرار وتطوير ما ينفع الناس في ذكر الله وتلاوة كتابه.</p>
+    <p class="free" data-ar="4 أشهر مجانًا — عرض حصري لأوائل الداعمين" data-en="4 months free — an exclusive offer for our earliest supporters">4 أشهر مجانًا — عرض حصري لأوائل الداعمين</p>
+    <p data-ar="للاحتفال بإطلاق بريميوم ومكافأة من يدعمنا منذ البداية، نمنح 4 أشهر من بريميوم مجانًا للمنضمّين مبكرًا. انضم إلى سيرفر ديسكورد وترقّب الإعلان الرسمي للحصول على أشهرك المجانية." data-en="To celebrate the Premium launch and reward everyone who supports us from the start, early members get 4 months of Premium free. Join our Discord server and watch for the official announcement to claim your free months.">للاحتفال بإطلاق بريميوم ومكافأة من يدعمنا منذ البداية، نمنح 4 أشهر من بريميوم مجانًا للمنضمّين مبكرًا. انضم إلى سيرفر ديسكورد وترقّب الإعلان الرسمي للحصول على أشهرك المجانية.</p>
+    <p data-ar="بعد انتهاء الأشهر المجانية: 5 دولارات شهريًا (حوالي 650 شلنًا كينيًا)." data-en="After the free months: $5 per month (about KES 650).">بعد انتهاء الأشهر المجانية: 5 دولارات شهريًا (حوالي 650 شلنًا كينيًا).</p>
+    <ul class="perks">
+      <li data-ar="مزايا حصرية" data-en="Exclusive perks">مزايا حصرية</li><li data-ar="خصائص إضافية" data-en="Extra features">خصائص إضافية</li><li data-ar="أولوية في الوصول" data-en="Priority access">أولوية في الوصول</li>
+    </ul>
+    <div class="pay">
+      <h3 data-ar="خيار الدفع عبر M-Pesa" data-en="Payment option: M-Pesa">خيار الدفع عبر M-Pesa</h3>
+      <p class="note" data-ar="للاشتراك بعد انتهاء الفترة المجانية، أو لدعمنا من الآن." data-en="To subscribe after the free period, or to support us from today.">للاشتراك بعد انتهاء الفترة المجانية، أو لدعمنا من الآن.</p>
+      <ol>
+        <li data-ar="افتح M-Pesa واختر «إرسال الأموال» (Send Money)." data-en="Open M-Pesa and choose “Send Money”.">افتح M-Pesa واختر «إرسال الأموال» (Send Money).</li>
+        <li><span data-ar="أدخل الرقم:" data-en="Enter the number:">أدخل الرقم:</span> <b dir="ltr" id="mpNum">0142286074</b> <button class="btn" id="mpCopy" data-ar="نسخ الرقم" data-en="Copy number" style="padding:2px 14px;font-size:14px">نسخ الرقم</button></li>
+        <li><span data-ar="المبلغ:" data-en="Amount:">المبلغ:</span> <b dir="ltr">KES 650</b></li>
+        <li data-ar="بعد الدفع، اكتب رمز العملية واسم ديسكورد أدناه، ثم أرسل الرسالة لنا على ديسكورد." data-en="After paying, enter the transaction code and your Discord username below, then send us the message on Discord.">بعد الدفع، اكتب رمز العملية واسم ديسكورد أدناه، ثم أرسل الرسالة لنا على ديسكورد.</li>
+      </ol>
+      <input id="mpCode" placeholder="M-Pesa code / رمز العملية" autocomplete="off">
+      <input id="mpUser" placeholder="Discord username / اسم ديسكورد" autocomplete="off">
+      <div style="margin-top:12px"><button class="btn fill" id="mpSend" data-ar="نسخ الرسالة وفتح ديسكورد" data-en="Copy message &amp; open Discord">نسخ الرسالة وفتح ديسكورد</button></div>
+      <div id="mpMsg" class="note"></div>
+      <p class="note" data-ar="يتم تفعيل بريميوم بعد التحقق من الدفع." data-en="Premium is activated after we verify the payment.">يتم تفعيل بريميوم بعد التحقق من الدفع.</p>
+    </div>
+  </section>
+  <script>
+  (function(){
+    var $=function(i){return document.getElementById(i)},ar=function(){return document.body.dataset.lang==='ar'};
+    function cp(t,ok){try{navigator.clipboard.writeText(t).then(ok,ok)}catch(e){ok()}}
+    $('mpCopy').onclick=function(){cp('0142286074',function(){$('mpMsg').textContent=ar()?'تم نسخ الرقم':'Number copied'})};
+    $('mpSend').onclick=function(){
+      var code=$('mpCode').value.trim(),u=$('mpUser').value.trim();
+      if(!code||!u){$('mpMsg').textContent=ar()?'أدخل رمز العملية واسم ديسكورد':'Enter the transaction code and Discord username';return}
+      cp('Premium payment | M-Pesa code: '+code+' | Discord: '+u+' | Amount: KES 650',function(){
+        $('mpMsg').textContent=ar()?'تم نسخ الرسالة. ألصقها في ديسكورد.':'Message copied. Paste it in Discord.';
+        window.open($('discord').getAttribute('href'),'_blank','noopener');
+      });
+    };
+  })();
+  </script>
+  <section class="join" id="join">
+    <h2 data-ar="انضم إلى مجتمع دار إحسان" data-en="Join the Dar Ihsan community">انضم إلى مجتمع دار إحسان</h2>
+    <p data-ar="تابع آخر التحديثات، وشاركنا أفكارك، وكن أول من يعلم بإطلاق بريميوم." data-en="Follow the latest updates, share your ideas, and be the first to know when Premium launches.">تابع آخر التحديثات، وشاركنا أفكارك، وكن أول من يعلم بإطلاق بريميوم.</p>
+    <a class="btn fill" id="discord" href="https://discord.gg/ruVW5H5Xe" target="_blank" rel="noopener"><svg width="20" height="20" viewBox="0 0 24 24" style="stroke:#1a1408;fill:none;stroke-width:1.500"><use href="#i-discord"></use></svg><span data-ar="انضم إلى سيرفر ديسكورد" data-en="Join our Discord server">انضم إلى سيرفر ديسكورد</span></a>
+  </section>
+</div>
+</main>
+<footer><div class="wrap">
+  <div class="verse" style="padding:0 0 30px" data-ar="وَذَكِّرْ فَإِنَّ الذِّكْرَىٰ تَنفَعُ الْمُؤْمِنِينَ" data-en="And remind, for indeed, the reminder benefits the believers.">وَذَكِّرْ فَإِنَّ الذِّكْرَىٰ تَنفَعُ الْمُؤْمِنِينَ</div>
+  <div class="fcols">
+    <div><h4 data-ar="المنصة" data-en="Platform">المنصة</h4><a href="#features" data-ar="القرآن الكريم" data-en="Quran">القرآن الكريم</a><a href="#features" data-ar="الأذكار" data-en="Remembrances">الأذكار</a><a href="#features" data-ar="ترتيل" data-en="Tarteel">ترتيل</a><a href="#features" data-ar="مواقيت الصلاة" data-en="Prayer times">مواقيت الصلاة</a><a href="#features" data-ar="أسماء الله الحسنى" data-en="Names of Allah">أسماء الله الحسنى</a></div>
+    <div><h4 data-ar="قانوني" data-en="Legal">قانوني</h4><a href="#" data-ar="سياسة الخصوصية" data-en="Privacy policy">سياسة الخصوصية</a><a href="#" data-ar="شروط الاستخدام" data-en="Terms of use">شروط الاستخدام</a><a href="#join" data-ar="تواصل معنا" data-en="Contact us">تواصل معنا</a></div>
+  </div>
+  <div class="copy" data-ar="دار إحسان. جميع الحقوق محفوظة © 2026" data-en="Dar Ihsan. All rights reserved © 2026">دار إحسان. جميع الحقوق محفوظة © 2026</div>
+</div></footer>
+<script>
+(function(){
+  var b=document.body,btn=document.getElementById('lang');
+  function set(l){
+    b.dataset.lang=l;document.documentElement.lang=l;document.documentElement.dir=l==='ar'?'rtl':'ltr';
+    document.querySelectorAll('[data-ar]').forEach(function(e){e.innerHTML=e.getAttribute('data-'+l)});
+    btn.textContent=l==='ar'?'English':'العربية';
+    document.dispatchEvent(new Event('langchange'));
+    try{localStorage.setItem('lang',l)}catch(e){}
+  }
+  var s='ar';try{s=localStorage.getItem('lang')||'ar'}catch(e){}
+  set(s);window.__set=set;
+  btn.onclick=function(){set(b.dataset.lang==='ar'?'en':'ar')};
+  var nav=document.getElementById('nav');
+  document.getElementById('menu').onclick=function(){nav.classList.toggle('open')};
+  nav.onclick=function(){nav.classList.remove('open')};
+})();
+</script>
+<script>
+(function(){
+var D=[['SA','السعودية','Saudi Arabia','u',[['مكة المكرمة','Makkah',21.4225,39.8262,'Asia/Riyadh'],['المدينة المنورة','Madinah',24.4686,39.6142,'Asia/Riyadh'],['الرياض','Riyadh',24.7136,46.6753,'Asia/Riyadh']]],
+['KE','كينيا','Kenya','m',[['مومباسا','Mombasa',-4.0435,39.6682,'Africa/Nairobi'],['نيروبي','Nairobi',-1.2921,36.8219,'Africa/Nairobi']]],
+['TZ','تنزانيا','Tanzania','m',[['دار السلام','Dar es Salaam',-6.7924,39.2083,'Africa/Dar_es_Salaam'],['زنجبار','Zanzibar',-6.1659,39.2026,'Africa/Dar_es_Salaam']]],
+['UG','أوغندا','Uganda','m',[['كمبالا','Kampala',0.3476,32.5825,'Africa/Kampala']]],
+['SO','الصومال','Somalia','m',[['مقديشو','Mogadishu',2.0469,45.3182,'Africa/Mogadishu']]],
+['EG','مصر','Egypt','e',[['القاهرة','Cairo',30.0444,31.2357,'Africa/Cairo'],['الإسكندرية','Alexandria',31.2001,29.9187,'Africa/Cairo']]],
+['AE','الإمارات','UAE','m',[['دبي','Dubai',25.2048,55.2708,'Asia/Dubai'],['أبوظبي','Abu Dhabi',24.4539,54.3773,'Asia/Dubai']]],
+['QA','قطر','Qatar','u',[['الدوحة','Doha',25.2854,51.531,'Asia/Qatar']]],
+['KW','الكويت','Kuwait','m',[['مدينة الكويت','Kuwait City',29.3759,47.9774,'Asia/Kuwait']]],
+['OM','عُمان','Oman','m',[['مسقط','Muscat',23.588,58.3829,'Asia/Muscat']]],
+['YE','اليمن','Yemen','m',[['صنعاء','Sanaa',15.3694,44.191,'Asia/Aden']]],
+['JO','الأردن','Jordan','m',[['عمّان','Amman',31.9454,35.9284,'Asia/Amman']]],
+['PS','فلسطين','Palestine','m',[['القدس','Jerusalem',31.7683,35.2137,'Asia/Jerusalem']]],
+['LB','لبنان','Lebanon','m',[['بيروت','Beirut',33.8938,35.5018,'Asia/Beirut']]],
+['IQ','العراق','Iraq','m',[['بغداد','Baghdad',33.3152,44.3661,'Asia/Baghdad']]],
+['TR','تركيا','Türkiye','m',[['إسطنبول','Istanbul',41.0082,28.9784,'Europe/Istanbul']]],
+['MA','المغرب','Morocco','m',[['الدار البيضاء','Casablanca',33.5731,-7.5898,'Africa/Casablanca']]],
+['DZ','الجزائر','Algeria','m',[['الجزائر','Algiers',36.7538,3.0588,'Africa/Algiers']]],
+['TN','تونس','Tunisia','m',[['تونس','Tunis',36.8065,10.1815,'Africa/Tunis']]],
+['SD','السودان','Sudan','e',[['الخرطوم','Khartoum',15.5007,32.5599,'Africa/Khartoum']]],
+['NG','نيجيريا','Nigeria','m',[['لاغوس','Lagos',6.5244,3.3792,'Africa/Lagos']]],
+['PK','باكستان','Pakistan','k',[['كراتشي','Karachi',24.8607,67.0011,'Asia/Karachi'],['لاهور','Lahore',31.5204,74.3587,'Asia/Karachi']]],
+['IN','الهند','India','k',[['دلهي','Delhi',28.6139,77.209,'Asia/Kolkata']]],
+['BD','بنغلاديش','Bangladesh','k',[['دكا','Dhaka',23.8103,90.4125,'Asia/Dhaka']]],
+['ID','إندونيسيا','Indonesia','m',[['جاكرتا','Jakarta',-6.2088,106.8456,'Asia/Jakarta']]],
+['MY','ماليزيا','Malaysia','m',[['كوالالمبور','Kuala Lumpur',3.139,101.6869,'Asia/Kuala_Lumpur']]],
+['GB','بريطانيا','United Kingdom','m',[['لندن','London',51.5074,-0.1278,'Europe/London']]],
+['FR','فرنسا','France','m',[['باريس','Paris',48.8566,2.3522,'Europe/Paris']]],
+['US','أمريكا','United States','m',[['نيويورك','New York',40.7128,-74.006,'America/New_York']]],
+['CA','كندا','Canada','m',[['تورونتو','Toronto',43.6532,-79.3832,'America/Toronto']]]];
+var N=[['الفجر','Fajr','i-moon'],['الشروق','Sunrise','i-sun'],['الظهر','Dhuhr','i-sun'],['العصر','Asr','i-sun'],['المغرب','Maghrib','i-sun'],['العشاء','Isha','i-moon']];
+var $=function(i){return document.getElementById(i)},L=function(){return document.body.dataset.lang||'ar'},T=function(a,e){return L()==='ar'?a:e};
+var R=Math.PI/180,sn=function(x){return Math.sin(x*R)},cs=function(x){return Math.cos(x*R)},tn=function(x){return Math.tan(x*R)},ac=function(x){return Math.acos(x)/R},as=function(x){return Math.asin(x)/R},a2=function(y,x){return Math.atan2(y,x)/R},cot=function(x){return Math.atan(1/x)/R};
+var fx=function(a,b){a=a-b*Math.floor(a/b);return a<0?a+b:a};
+function jd(y,m,d){if(m<=2){y--;m+=12}var A=Math.floor(y/100),B=2-A+Math.floor(A/4);return Math.floor(365.25*(y+4716))+Math.floor(30.6001*(m+1))+d+B-1524.5}
+function sun(j){var d=j-2451545,g=fx(357.529+.98560028*d,360),q=fx(280.459+.98564736*d,360),l=fx(q+1.915*sn(g)+.02*sn(2*g),360),e=23.439-3.6e-7*d,ra=fx(a2(cs(e)*sn(l),cs(l))/15,24),eq=q/15-ra;if(eq>12)eq-=24;if(eq<-12)eq+=24;return{dec:as(sn(e)*sn(l)),eq:eq}}
+function tzp(tz,d){var o={};new Intl.DateTimeFormat('en-US',{timeZone:tz,hourCycle:'h23',year:'numeric',month:'numeric',day:'numeric',hour:'numeric',minute:'numeric',second:'numeric'}).formatToParts(d).forEach(function(x){o[x.type]=+x.value});return{y:o.year,m:o.month,d:o.day,h:o.hour%24,i:o.minute,s:o.second}}
+function calc(c,m,d){var p=tzp(c[4],d),off=(Date.UTC(p.y,p.m-1,p.d,p.h,p.i,p.s)-Math.floor(d.getTime()/1000)*1000)/36e5,lat=c[2],lon=c[3],j=jd(p.y,p.m,p.d)-lon/360,s=sun(j+.5),noon=12+off-lon/15-s.eq;
+ function ha(a){var v=(-sn(a)-sn(s.dec)*sn(lat))/(cs(s.dec)*cs(lat));return Math.abs(v)>1?NaN:ac(v)/15}
+ var fa=m==='u'?18.5:m==='e'?19.5:18,ia=m==='e'?17.5:m==='k'?18:17,set=noon+ha(.833);
+ return{t:[noon-ha(fa),noon-ha(.833),noon,noon+ha(-cot(1+tn(Math.abs(lat-s.dec)))),set,m==='u'?set+1.5:noon+ha(ia)],now:p.h+p.i/60+p.s/3600}}
+function fmt(h){if(isNaN(h))return '—';var m=Math.round(fx(h,24)*60),hh=Math.floor(m/60)%24,mm=m%60;return (hh%12||12)+':'+('0'+mm).slice(-2)+' '+(hh>=12?T('م','PM'):T('ص','AM'))}
+var K=[21.4225,39.8262],coS=$('pCo'),ciS=$('pCi'),cur=D[0][4][0],meth='u',q=0,hd=null;
+function fillCo(){var v=coS.value||'0';coS.innerHTML='';D.forEach(function(c,i){var o=document.createElement('option');o.value=i;o.textContent=T(c[1],c[2]);coS.appendChild(o)});coS.value=v;fillCi()}
+function fillCi(){var v=ciS.value||'0',cs2=D[coS.value][4];if(+v>=cs2.length||ciS.dataset.co!==coS.value)v='0';ciS.dataset.co=coS.value;ciS.innerHTML='';cs2.forEach(function(c,i){var o=document.createElement('option');o.value=i;o.textContent=T(c[0],c[1]);ciS.appendChild(o)});ciS.value=v;pick()}
+function pick(){var C=D[coS.value];cur=C[4][ciS.value];meth=C[3];var f1=cur[2]*R,f2=K[0]*R,dl=(K[1]-cur[3])*R;q=fx(a2(Math.sin(dl),Math.cos(f1)*Math.tan(f2)-Math.sin(f1)*Math.cos(dl)),360);$('pQ').textContent=Math.round(q)+'°';rot();tick()}
+function rot(){$('qN').setAttribute('transform','rotate('+(hd==null?q:q-hd)+' 50 50)')}
+function tick(){try{var d=new Date(),r=calc(cur,meth,d),ar=L()==='ar',ti=[0,2,3,4,5],nx=-1,cu=5,i;
+ for(i=0;i<5;i++){if(r.t[ti[i]]>r.now){nx=ti[i];break}cu=ti[i]}
+ var diff=nx<0?r.t[0]+24-r.now:r.t[nx]-r.now;if(nx<0)nx=0;diff=Math.max(0,Math.round(diff*3600));
+ var p2=function(n){return ('0'+n).slice(-2)};
+ $('pC').textContent=p2(Math.floor(diff/3600))+':'+p2(Math.floor(diff%3600/60))+':'+p2(diff%60);
+ $('pN').textContent=T(N[nx][0],N[nx][1]);$('pAt').textContent=T('عند ','At ')+fmt(r.t[nx]);
+ $('pG').textContent=new Intl.DateTimeFormat(ar?'ar':'en-US',{weekday:'long',day:'numeric',month:'long',year:'numeric',timeZone:cur[4]}).format(d);
+ $('pH').textContent=new Intl.DateTimeFormat((ar?'ar-SA':'en-US')+'-u-ca-islamic-umalqura',{day:'numeric',month:'long',year:'numeric',timeZone:cur[4]}).format(d);
+ var g=$('pGrid'),sig=L()+cur[1]+nx+cu+Math.floor(r.now*60);
+ if(g.dataset.s!==sig){g.dataset.s=sig;g.innerHTML='';N.forEach(function(n,k){var e=document.createElement('div');e.className='pt'+(k===nx?' nx':k===cu?' cu':'');e.innerHTML='<svg viewBox="0 0 24 24"><use href="#'+n[2]+'"/></svg><div>'+T(n[0],n[1])+'</div><b>'+fmt(r.t[k])+'</b>'+(k===nx?'<span class="tag">'+T('القادمة','Next')+'</span>':k===cu?'<span class="tag">'+T('الآن','Now')+'</span>':'');g.appendChild(e)})}
+}catch(e){}}
+coS.onchange=function(){ciS.value='0';fillCi()};ciS.onchange=pick;
+document.addEventListener('langchange',function(){fillCo()});
+$('pCompass').onclick=function(){var h=function(e){var v=e.webkitCompassHeading!=null?e.webkitCompassHeading:(e.alpha!=null?360-e.alpha:null);if(v!=null){hd=v;rot()}},ev='ondeviceorientationabsolute' in window?'deviceorientationabsolute':'deviceorientation',go=function(){window.addEventListener(ev,h,true)};try{if(window.DeviceOrientationEvent&&DeviceOrientationEvent.requestPermission){DeviceOrientationEvent.requestPermission().then(function(r){if(r==='granted')go()})}else go()}catch(e){}};
+fillCo();setInterval(tick,1000);
+})();
+</script>
+<div id="acct" hidden><div class="acard" id="acBody"></div></div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
+<script>
+(function(){
+var lb=document.getElementById('loginBtn');
+function go(){
+var sb=supabase.createClient('https://tsmnzjaddhjyksdwjjxf.supabase.co','sb_publishable_G5z9ps0KHiv7bshE6h1Htw_DhuvizAX');
+var $=function(i){return document.getElementById(i)},L=function(){return document.body.dataset.lang||'ar'},t=function(a,e){return L()==='ar'?a:e};
+var esc=function(s){return String(s==null?'':s).replace(/[&<>"']/g,function(x){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[x]})};
+var me=null,prof=null,box=$('acct'),body=$('acBody');
+var isA=function(){return prof&&(prof.role==='admin'||prof.role==='owner')},isO=function(){return prof&&prof.role==='owner'};
+var fd=function(x){return new Date(x).toLocaleDateString(L()==='ar'?'ar':'en-US')};
+function load(){if(!me){prof=null;paint();return}sb.from('profiles').select('*').eq('id',me.id).maybeSingle().then(function(r){prof=r.data;paint()})}
+function paint(){lb.textContent=me?((prof&&prof.display_name)||(me.email||t('حسابي','My account'))):t('تسجيل الدخول','Log in');if(!box.hidden)render()}
+sb.auth.getSession().then(function(r){me=r.data.session?r.data.session.user:null;load()});
+sb.auth.onAuthStateChange(function(e,s){me=s?s.user:null;load()});
+lb.onclick=function(){if(!me){sb.auth.signInWithOAuth({provider:'discord',options:{redirectTo:location.origin+location.pathname}});return}box.hidden=false;render()};
+document.addEventListener('langchange',paint);
+box.onclick=function(e){if(e.target===box)box.hidden=true};
+function render(){
+ var pr=prof&&prof.premium_until&&new Date(prof.premium_until)>new Date();
+ var h='<h3>'+esc((prof&&prof.display_name)||me.email||'')+'</h3><div style="color:var(--mut)">'+esc(me.email||'')+'</div>'
+ +'<div class="r"><span>'+t('الحالة','Status')+'</span><b>'+(pr?t('بريميوم حتى ','Premium until ')+fd(prof.premium_until):t('حساب مجاني','Free account'))+'</b></div>'
+ +'<div class="r"><span>'+t('الدور','Role')+'</span><b>'+esc(prof?prof.role:'user')+'</b></div>';
+ if(isA())h+='<h4>'+t('الدفعات المعلّقة','Pending payments')+'</h4><div id="acPay">...</div>';
+ if(isO())h+='<h4>'+t('الفريق (المشرفون)','Team (admins)')+'</h4><input id="acEm" placeholder="email@example.com" dir="ltr"><button class="btn b" data-a="mk">'+t('إضافة مشرف','Add admin')+'</button><div id="acMsg" class="note"></div><div id="acTeam">...</div>';
+ h+='<div style="margin-top:16px;display:flex;gap:8px;flex-wrap:wrap"><button class="btn b" data-a="out">'+t('تسجيل الخروج','Log out')+'</button><button class="btn b" data-a="x">'+t('إغلاق','Close')+'</button></div>';
+ body.innerHTML=h;if(isA())loadPay();if(isO())loadTeam()}
+function loadPay(){sb.from('payments').select('id,user_id,mpesa_code,amount_kes,created_at,profiles(email,display_name)').eq('status','pending').order('created_at').then(function(r){var d=$('acPay');if(!d)return;if(r.error){d.textContent=r.error.message;return}
+ d.innerHTML=r.data.length?r.data.map(function(p){return'<div class="r"><span dir="ltr">'+esc(p.mpesa_code)+' · KES '+p.amount_kes+' · '+esc(p.profiles&&(p.profiles.display_name||p.profiles.email))+'</span><span><button class="btn b" data-a="ok" data-id="'+p.id+'" data-u="'+p.user_id+'">'+t('قبول','Approve')+'</button> <button class="btn b" data-a="no" data-id="'+p.id+'">'+t('رفض','Reject')+'</button></span></div>'}).join(''):'<div class="note">'+t('لا توجد دفعات معلّقة','No pending payments')+'</div>'})}
+function loadTeam(){sb.from('profiles').select('email,role').in('role',['admin','owner']).then(function(r){var d=$('acTeam');if(!d||!r.data)return;d.innerHTML=r.data.map(function(p){return'<div class="r"><span dir="ltr">'+esc(p.email)+' · '+esc(p.role)+'</span>'+(p.role==='admin'?'<button class="btn b" data-a="rm" data-e="'+esc(p.email)+'">'+t('إزالة','Remove')+'</button>':'')+'</div>'}).join('')})}
+function setRole(em,role){sb.from('profiles').update({role:role}).eq('email',em).select().then(function(r){var m=$('acMsg');if(m)m.textContent=r.error?r.error.message:(r.data.length?t('تم','Done'):t('يجب أن يسجّل هذا الشخص الدخول مرة واحدة أولًا','This person must log in once first'));loadTeam()})}
+body.onclick=function(e){var b=e.target.closest('button');if(!b)return;var a=b.dataset.a;
+ if(a==='x')box.hidden=true;
+ else if(a==='out'){box.hidden=true;sb.auth.signOut()}
+ else if(a==='mk'){var em=$('acEm').value.trim().toLowerCase();if(em)setRole(em,'admin')}
+ else if(a==='rm')setRole(b.dataset.e,'user');
+ else if(a==='no')sb.from('payments').update({status:'rejected'}).eq('id',b.dataset.id).then(loadPay);
+ else if(a==='ok')sb.from('profiles').select('premium_until').eq('id',b.dataset.u).single().then(function(r){var base=Math.max(Date.now(),r.data&&r.data.premium_until?new Date(r.data.premium_until).getTime():0);
+  sb.from('profiles').update({premium_until:new Date(base+30*864e5).toISOString()}).eq('id',b.dataset.u).then(function(){sb.from('payments').update({status:'approved'}).eq('id',b.dataset.id).then(loadPay)})})};
+$('mpSend').addEventListener('click',function(){var code=$('mpCode').value.trim();if(me&&code)sb.from('payments').insert({user_id:me.id,mpesa_code:code}).then(function(r){$('mpMsg').textContent=r.error?(r.error.code==='23505'?t('هذا الرمز مسجّل مسبقًا','This code was already submitted'):r.error.message):t('تم إرسال الدفعة للمراجعة','Payment submitted for review')})});
+}
+if(window.supabase)go();else{var s=document.createElement('script');s.src='https://unpkg.com/@supabase/supabase-js@2.45.4/dist/umd/supabase.js';s.onload=go;s.onerror=function(){lb.onclick=function(){alert('تعذّر تحميل تسجيل الدخول. تحقق من الاتصال أو أوقف حاجب الإعلانات.\nLogin failed to load. Check your connection or turn off your ad blocker.')}};document.head.appendChild(s)}
+})();
+</script>
+</body></html>
