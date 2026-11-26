@@ -68,6 +68,11 @@ footer{margin-top:70px;border-top:1px solid #1d1a12;padding:40px 0 30px}
 .pay h3{margin:0 0 10px;color:var(--gold);text-align:center}.pay ol{margin:0 0 16px;padding-inline-start:22px;color:#cfc6b0}
 .pay input{width:100%;margin-top:8px;background:#16140d;color:var(--txt);border:1px solid var(--line);border-radius:12px;padding:12px;font:inherit;font-size:16px}
 .pay .note{text-align:center}
+#acct{position:fixed;inset:0;z-index:30;background:rgba(0,0,0,.75);display:flex;align-items:center;justify-content:center;padding:14px}
+.acard{width:100%;max-width:560px;max-height:88vh;overflow:auto;background:#0d0c08;border:1px solid var(--gold2);border-radius:24px;padding:20px;text-align:start}
+.acard h3{margin:0 0 6px;color:var(--gold)}.acard h4{margin:18px 0 8px;color:var(--gold);border-top:1px solid var(--line);padding-top:12px}
+.acard .r{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap;border:1px solid var(--line);border-radius:14px;padding:8px 12px;margin:6px 0;font-size:15px}
+.acard .b{padding:3px 14px;font-size:14px}.acard input{background:#16140d;color:var(--txt);border:1px solid var(--line);border-radius:12px;padding:8px 12px;font:inherit;font-size:15px;width:100%;margin:6px 0}
 </style>
 </head>
 <body data-lang="ar">
@@ -91,6 +96,7 @@ footer{margin-top:70px;border-top:1px solid #1d1a12;padding:40px 0 30px}
     <a href="#join" data-ar="المجتمع" data-en="Community">المجتمع</a>
   </nav>
   <div style="display:flex;gap:8px;align-items:center">
+    <button class="btn" id="loginBtn" style="padding:8px 16px;font-size:16px">تسجيل الدخول</button>
     <button class="btn" id="lang" aria-label="Language">English</button>
     <button class="menu" id="menu" aria-label="Menu"><svg width="20" height="20" viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></button>
   </div>
@@ -159,17 +165,4 @@ footer{margin-top:70px;border-top:1px solid #1d1a12;padding:40px 0 30px}
       var code=$('mpCode').value.trim(),u=$('mpUser').value.trim();
       if(!code||!u){$('mpMsg').textContent=ar()?'أدخل رمز العملية واسم ديسكورد':'Enter the transaction code and Discord username';return}
       cp('Premium payment | M-Pesa code: '+code+' | Discord: '+u+' | Amount: KES 650',function(){
-        $('mpMsg').textContent=ar()?'تم نسخ الرسالة. ألصقها في ديسكورد.':'Message copied. Paste it in Discord.';
-        window.open($('discord').getAttribute('href'),'_blank','noopener');
-      });
-    };
-  })();
-  </script>
-  <section class="join" id="join">
-    <h2 data-ar="انضم إلى مجتمع دار إحسان" data-en="Join the Dar Ihsan community">انضم إلى مجتمع دار إحسان</h2>
-    <p data-ar="تابع آخر التحديثات، وشاركنا أفكارك، وكن أول من يعلم بإطلاق بريميوم." data-en="Follow the latest updates, share your ideas, and be the first to know when Premium launches.">تابع آخر التحديثات، وشاركنا أفكارك، وكن أول من يعلم بإطلاق بريميوم.</p>
-    <a class="btn fill" id="discord" href="https://discord.gg/ruVW5H5Xe" target="_blank" rel="noopener"><svg width="20" height="20" viewBox="0 0 24 24" style="stroke:#1a1408;fill:none;stroke-width:1.500"><use href="#i-discord"></use></svg><span data-ar="انضم إلى سيرفر ديسكورد" data-en="Join our Discord server">انضم إلى سيرفر ديسكورد</span></a>
-  </section>
-</div>
-</main>
-<footer>
+        $('mpMsg').textContent=ar()?'تم نسخ الرسالة. ألصقها في ديسكورد.':'Mess
